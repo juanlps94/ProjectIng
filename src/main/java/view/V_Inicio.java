@@ -26,143 +26,144 @@ public class V_Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        background = new javax.swing.JPanel();
+        Background = new javax.swing.JPanel();
         HeaderInicio = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        NombreApp = new javax.swing.JLabel();
+        EntrarBtn = new javax.swing.JButton();
+        RegistarseBtn = new javax.swing.JButton();
+        Img_hotel = new javax.swing.JLabel();
+        Img_Hotel2 = new javax.swing.JLabel();
+        ReservarBtn = new javax.swing.JButton();
         jTextArea1 = new javax.swing.JTextArea();
         jTextArea3 = new javax.swing.JTextArea();
         jTextArea2 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("123 Viajes C.A.");
+        setBackground(new java.awt.Color(255, 255, 255));
+        setMaximumSize(new java.awt.Dimension(720, 480));
+        setMinimumSize(new java.awt.Dimension(720, 480));
 
-        background.setBackground(new java.awt.Color(255, 255, 255));
-        background.setForeground(new java.awt.Color(255, 255, 255));
-        background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Background.setBackground(new java.awt.Color(255, 255, 255));
+        Background.setForeground(new java.awt.Color(255, 255, 255));
+        Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("Register");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        HeaderInicio.setBackground(new java.awt.Color(204, 255, 255));
+
+        NombreApp.setFont(new java.awt.Font("Script MT Bold", 1, 24)); // NOI18N
+        NombreApp.setText("123 Viajes C.A");
+
+        EntrarBtn.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        EntrarBtn.setText("Entrar");
+        EntrarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                EntrarBtnActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Log in");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setFont(new java.awt.Font("Script MT Bold", 1, 24)); // NOI18N
-        jLabel1.setText("123 Viajes C.A");
+        RegistarseBtn.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        RegistarseBtn.setText("Registrarse");
 
         javax.swing.GroupLayout HeaderInicioLayout = new javax.swing.GroupLayout(HeaderInicio);
         HeaderInicio.setLayout(HeaderInicioLayout);
         HeaderInicioLayout.setHorizontalGroup(
             HeaderInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderInicioLayout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 224, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(NombreApp, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 296, Short.MAX_VALUE)
+                .addComponent(RegistarseBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EntrarBtn)
                 .addContainerGap())
         );
         HeaderInicioLayout.setVerticalGroup(
             HeaderInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HeaderInicioLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(HeaderInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addContainerGap(22, Short.MAX_VALUE))
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(HeaderInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(NombreApp, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
+                .addComponent(EntrarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(RegistarseBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        background.add(HeaderInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 60));
+        Background.add(HeaderInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/hotel1.jpeg"))); // NOI18N
-        background.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 250, 130));
+        Img_hotel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/hotel1.jpeg"))); // NOI18N
+        Img_hotel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        Background.add(Img_hotel, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 100, 250, 130));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/hotel2.jpeg"))); // NOI18N
-        background.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 240, 130));
+        Img_Hotel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/hotel2.jpeg"))); // NOI18N
+        Img_Hotel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        Background.add(Img_Hotel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 240, 130));
 
-        jButton3.setBackground(new java.awt.Color(0, 255, 255));
-        jButton3.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Reserva YA!!!!");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        ReservarBtn.setBackground(new java.awt.Color(153, 255, 255));
+        ReservarBtn.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        ReservarBtn.setForeground(new java.awt.Color(51, 51, 255));
+        ReservarBtn.setText("¡¡Reserva ya!!");
+        ReservarBtn.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        ReservarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                ReservarBtnActionPerformed(evt);
             }
         });
-        background.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(423, 390, -1, 50));
+        Background.add(ReservarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 370, 250, 50));
 
         jTextArea1.setEditable(false);
         jTextArea1.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextArea1.setFont(new java.awt.Font("Roboto", 2, 18)); // NOI18N
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
         jTextArea1.setText("¡¡¡Suscribete, reserva  y disfruta de unas maravillosas vacaciones!!!");
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setAlignmentX(1.0F);
         jTextArea1.setAlignmentY(1.0F);
-        background.add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 420, 50));
+        Background.add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 420, 50));
 
         jTextArea3.setEditable(false);
         jTextArea3.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea3.setColumns(20);
+        jTextArea3.setFont(new java.awt.Font("Roboto", 2, 14)); // NOI18N
         jTextArea3.setLineWrap(true);
         jTextArea3.setRows(5);
         jTextArea3.setText("Para pasar las mejores vacaciones en familia navega en nuestra plataforma y encuentra los mejores hoteles y playas.");
         jTextArea3.setWrapStyleWord(true);
         jTextArea3.setAlignmentX(1.0F);
         jTextArea3.setAlignmentY(1.0F);
-        background.add(jTextArea3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 250, 60));
+        Background.add(jTextArea3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 250, 80));
 
         jTextArea2.setEditable(false);
         jTextArea2.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea2.setColumns(1);
+        jTextArea2.setFont(new java.awt.Font("Roboto", 2, 14)); // NOI18N
         jTextArea2.setLineWrap(true);
         jTextArea2.setRows(20);
         jTextArea2.setTabSize(20);
         jTextArea2.setText("Para pasar las mejores vacaciones en familia navega en nuestra plataforma y encuentra los mejores hoteles y playas.");
         jTextArea2.setMaximumSize(new java.awt.Dimension(32125, 32125));
         jTextArea2.setMinimumSize(new java.awt.Dimension(32125, 1856));
-        jTextArea2.setPreferredSize(new java.awt.Dimension(32125, 320));
-        background.add(jTextArea2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 260, 50));
+        Background.add(jTextArea2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 280, 260, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, 662, Short.MAX_VALUE)
+            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 457, Short.MAX_VALUE)
+            .addComponent(Background, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ReservarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReservarBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ReservarBtnActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void EntrarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntrarBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_EntrarBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -207,14 +208,14 @@ public class V_Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Background;
+    private javax.swing.JButton EntrarBtn;
     private javax.swing.JPanel HeaderInicio;
-    private javax.swing.JPanel background;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel Img_Hotel2;
+    private javax.swing.JLabel Img_hotel;
+    private javax.swing.JLabel NombreApp;
+    private javax.swing.JButton RegistarseBtn;
+    private javax.swing.JButton ReservarBtn;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
