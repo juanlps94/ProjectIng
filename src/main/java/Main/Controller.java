@@ -14,8 +14,6 @@ import view.*;
  * @author Juan
  */
 public class Controller {
-    ArrayList<Usuario> arrUsuarios = new ArrayList<Usuario>();
-    ArrayList<Administrador> arrAdministrador = new ArrayList<Administrador>();
     
     //variables de las interfaces, singlenton y otros.
     public V_Inicio vistaInicio = new V_Inicio();
