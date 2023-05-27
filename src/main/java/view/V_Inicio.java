@@ -41,11 +41,13 @@ public class V_Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Background = new javax.swing.JPanel();
         HeaderInicio = new javax.swing.JPanel();
         NombreApp = new javax.swing.JLabel();
         EntrarBtn = new javax.swing.JButton();
         RegistarseBtn = new javax.swing.JButton();
+        Background = new javax.swing.JPanel();
+        Img_palafitos = new javax.swing.JLabel();
+        Img_piscina = new javax.swing.JLabel();
         ReservarBtn = new javax.swing.JButton();
         jTextArea1 = new javax.swing.JTextArea();
         jTextArea3 = new javax.swing.JTextArea();
@@ -56,10 +58,7 @@ public class V_Inicio extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(720, 480));
         setMinimumSize(new java.awt.Dimension(720, 480));
-
-        Background.setBackground(new java.awt.Color(255, 255, 255));
-        Background.setForeground(new java.awt.Color(255, 255, 255));
-        Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         HeaderInicio.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -76,11 +75,6 @@ public class V_Inicio extends javax.swing.JFrame {
 
         RegistarseBtn.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         RegistarseBtn.setText("Registrarse");
-        RegistarseBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegistarseBtnActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout HeaderInicioLayout = new javax.swing.GroupLayout(HeaderInicio);
         HeaderInicio.setLayout(HeaderInicioLayout);
@@ -103,7 +97,16 @@ public class V_Inicio extends javax.swing.JFrame {
                 .addComponent(RegistarseBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        Background.add(HeaderInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, -1));
+        getContentPane().add(HeaderInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        Background.setBackground(new java.awt.Color(255, 255, 255));
+        Background.setForeground(new java.awt.Color(255, 255, 255));
+
+        Img_palafitos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/hotel1.jpeg"))); // NOI18N
+        Img_palafitos.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        Img_piscina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/hotel2.jpeg"))); // NOI18N
+        Img_piscina.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         ReservarBtn.setBackground(new java.awt.Color(153, 255, 255));
         ReservarBtn.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
@@ -115,7 +118,6 @@ public class V_Inicio extends javax.swing.JFrame {
                 ReservarBtnActionPerformed(evt);
             }
         });
-        Background.add(ReservarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 370, 250, 50));
 
         jTextArea1.setEditable(false);
         jTextArea1.setBackground(new java.awt.Color(255, 255, 255));
@@ -127,7 +129,6 @@ public class V_Inicio extends javax.swing.JFrame {
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setAlignmentX(1.0F);
         jTextArea1.setAlignmentY(1.0F);
-        Background.add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 420, 50));
 
         jTextArea3.setEditable(false);
         jTextArea3.setBackground(new java.awt.Color(255, 255, 255));
@@ -139,7 +140,6 @@ public class V_Inicio extends javax.swing.JFrame {
         jTextArea3.setWrapStyleWord(true);
         jTextArea3.setAlignmentX(1.0F);
         jTextArea3.setAlignmentY(1.0F);
-        Background.add(jTextArea3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 250, 80));
 
         jTextArea2.setEditable(false);
         jTextArea2.setBackground(new java.awt.Color(255, 255, 255));
@@ -148,41 +148,67 @@ public class V_Inicio extends javax.swing.JFrame {
         jTextArea2.setLineWrap(true);
         jTextArea2.setRows(20);
         jTextArea2.setTabSize(20);
-        jTextArea2.setText("Para pasar las mejores vacaciones en familia navega en nuestra plataforma y encuentra los mejores hoteles y playas.");
+        jTextArea2.setText("Para pasar las mejores vacaciones en familia navega en nuestra plataforma y encuentra\nlos mejores hoteles y playas.");
         jTextArea2.setMaximumSize(new java.awt.Dimension(32125, 32125));
         jTextArea2.setMinimumSize(new java.awt.Dimension(32125, 1856));
-        Background.add(jTextArea2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 280, 260, 60));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        javax.swing.GroupLayout BackgroundLayout = new javax.swing.GroupLayout(Background);
+        Background.setLayout(BackgroundLayout);
+        BackgroundLayout.setHorizontalGroup(
+            BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BackgroundLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BackgroundLayout.createSequentialGroup()
+                        .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ReservarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(BackgroundLayout.createSequentialGroup()
+                        .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextArea3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Img_piscina, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(BackgroundLayout.createSequentialGroup()
+                                .addGap(140, 140, 140)
+                                .addComponent(Img_palafitos, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 124, Short.MAX_VALUE)
+                                .addComponent(jTextArea2, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(14, 14, 14))))))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Background, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
+        BackgroundLayout.setVerticalGroup(
+            BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BackgroundLayout.createSequentialGroup()
+                .addGap(100, 100, 100)
+                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(BackgroundLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jTextArea3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(Img_piscina, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30))
+                    .addGroup(BackgroundLayout.createSequentialGroup()
+                        .addComponent(Img_palafitos, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextArea2, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)))
+                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ReservarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
+
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 480));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ReservarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReservarBtnActionPerformed
-        // TODO add your handling code here:
-        this.vistaSignIn.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_ReservarBtnActionPerformed
-
     private void EntrarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntrarBtnActionPerformed
         // TODO add your handling code here:
-        this.vistaLogin.setVisible(true);
-        this.setVisible(false);
     }//GEN-LAST:event_EntrarBtnActionPerformed
 
-    private void RegistarseBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistarseBtnActionPerformed
-        this.vistaSignIn.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_RegistarseBtnActionPerformed
+    private void ReservarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReservarBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ReservarBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,6 +218,8 @@ public class V_Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel Background;
     private javax.swing.JButton EntrarBtn;
     private javax.swing.JPanel HeaderInicio;
+    private javax.swing.JLabel Img_palafitos;
+    private javax.swing.JLabel Img_piscina;
     private javax.swing.JLabel NombreApp;
     private javax.swing.JButton RegistarseBtn;
     private javax.swing.JButton ReservarBtn;

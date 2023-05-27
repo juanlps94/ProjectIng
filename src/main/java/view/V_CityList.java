@@ -31,13 +31,13 @@ public class V_CityList extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Background = new javax.swing.JPanel();
         Header = new javax.swing.JPanel();
         NombreApp = new javax.swing.JLabel();
         BienvenidoMensage = new javax.swing.JLabel();
         Perfil = new javax.swing.JButton();
         Salir = new javax.swing.JButton();
         ProfilePic = new javax.swing.JLabel();
+        Background = new javax.swing.JPanel();
         BuscadorCiudad = new javax.swing.JTextField();
         CiudadesDisponibles = new javax.swing.JLabel();
         BuscarBtn = new javax.swing.JButton();
@@ -70,12 +70,8 @@ public class V_CityList extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Background.setBackground(new java.awt.Color(255, 255, 255));
-        Background.setMaximumSize(new java.awt.Dimension(720, 480));
-        Background.setMinimumSize(new java.awt.Dimension(720, 480));
-        Background.setPreferredSize(new java.awt.Dimension(720, 480));
-
         Header.setBackground(new java.awt.Color(204, 255, 255));
+        Header.setPreferredSize(new java.awt.Dimension(720, 80));
 
         NombreApp.setFont(new java.awt.Font("Script MT Bold", 1, 24)); // NOI18N
         NombreApp.setText("123 Viajes C.A");
@@ -86,6 +82,7 @@ public class V_CityList extends javax.swing.JFrame {
         Perfil.setBackground(new java.awt.Color(153, 255, 255));
         Perfil.setMnemonic('3');
         Perfil.setText("Perfil");
+        Perfil.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 0, 255), null));
         Perfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PerfilActionPerformed(evt);
@@ -95,6 +92,7 @@ public class V_CityList extends javax.swing.JFrame {
         Salir.setBackground(new java.awt.Color(153, 255, 255));
         Salir.setMnemonic('3');
         Salir.setText("Salir");
+        Salir.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 0, 255), null));
         Salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SalirActionPerformed(evt);
@@ -115,13 +113,13 @@ public class V_CityList extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(ProfilePic, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(HeaderLayout.createSequentialGroup()
                         .addComponent(Perfil)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Salir))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(BienvenidoMensage, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27))
+                .addGap(16, 16, 16))
         );
         HeaderLayout.setVerticalGroup(
             HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -130,15 +128,20 @@ public class V_CityList extends javax.swing.JFrame {
                 .addGap(7, 7, 7)
                 .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(HeaderLayout.createSequentialGroup()
-                        .addGap(0, 6, Short.MAX_VALUE)
                         .addComponent(BienvenidoMensage, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(18, 18, Short.MAX_VALUE)
+                        .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Perfil)
                             .addComponent(Salir)))
                     .addComponent(ProfilePic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
+
+        getContentPane().add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        Background.setBackground(new java.awt.Color(255, 255, 255));
+        Background.setMaximumSize(new java.awt.Dimension(720, 480));
+        Background.setMinimumSize(new java.awt.Dimension(720, 480));
 
         BuscadorCiudad.setFont(new java.awt.Font("Roboto", 2, 12)); // NOI18N
         BuscadorCiudad.setForeground(new java.awt.Color(102, 102, 102));
@@ -163,7 +166,7 @@ public class V_CityList extends javax.swing.JFrame {
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         jPanel2.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel2.setLayout(new java.awt.GridLayout(1, 0));
+        jPanel2.setLayout(new java.awt.GridLayout());
 
         CityInfoBox.setBackground(new java.awt.Color(204, 204, 204));
         CityInfoBox.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -408,26 +411,32 @@ public class V_CityList extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addComponent(BuscarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 29, Short.MAX_VALUE))
-            .addComponent(Header, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         BackgroundLayout.setVerticalGroup(
             BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BackgroundLayout.createSequentialGroup()
-                .addComponent(Header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(100, 100, 100)
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(BuscadorCiudad)
                     .addComponent(BuscarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
                     .addComponent(CiudadesDisponibles, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(10, 10, 10)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void PerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PerfilActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PerfilActionPerformed
+
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SalirActionPerformed
 
     private void BuscadorCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscadorCiudadActionPerformed
         // TODO add your handling code here:
@@ -439,25 +448,11 @@ public class V_CityList extends javax.swing.JFrame {
 
     private void VerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-        this.vistaHoteles.setVisible(true);
     }//GEN-LAST:event_VerActionPerformed
 
     private void InfoCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfoCiudadActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_InfoCiudadActionPerformed
-
-    private void PerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PerfilActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
-        this.vistaModPerfil.setVisible(true);
-    }//GEN-LAST:event_PerfilActionPerformed
-
-    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
-        this.vistaInicio.setVisible(true);
-    }//GEN-LAST:event_SalirActionPerformed
 
     private void Ver1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ver1ActionPerformed
         // TODO add your handling code here:

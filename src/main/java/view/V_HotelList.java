@@ -31,6 +31,12 @@ public class V_HotelList extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Header = new javax.swing.JPanel();
+        NombreApp = new javax.swing.JLabel();
+        BienvenidoMensage = new javax.swing.JLabel();
+        Perfil = new javax.swing.JButton();
+        Salir = new javax.swing.JButton();
+        ProfilePic = new javax.swing.JLabel();
         Background = new javax.swing.JPanel();
         BuscadorCiudad = new javax.swing.JTextField();
         CiudadesDisponibles = new javax.swing.JLabel();
@@ -54,12 +60,6 @@ public class V_HotelList extends javax.swing.JFrame {
         Ver3 = new javax.swing.JButton();
         InfoHotel3 = new javax.swing.JTextField();
         Ciudad_Pic3 = new javax.swing.JLabel();
-        Header = new javax.swing.JPanel();
-        NombreApp = new javax.swing.JLabel();
-        BienvenidoMensage = new javax.swing.JLabel();
-        Perfil = new javax.swing.JButton();
-        Salir = new javax.swing.JButton();
-        ProfilePic = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("123 Viajes C.A.");
@@ -67,11 +67,80 @@ public class V_HotelList extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(720, 480));
         setPreferredSize(new java.awt.Dimension(720, 480));
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Header.setBackground(new java.awt.Color(204, 255, 255));
+        Header.setPreferredSize(new java.awt.Dimension(720, 80));
+
+        NombreApp.setFont(new java.awt.Font("Script MT Bold", 1, 24)); // NOI18N
+        NombreApp.setText("123 Viajes C.A");
+
+        BienvenidoMensage.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        BienvenidoMensage.setText("Bienvenido/a");
+
+        Perfil.setBackground(new java.awt.Color(153, 255, 255));
+        Perfil.setMnemonic('3');
+        Perfil.setText("Perfil");
+        Perfil.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 0, 255), null));
+        Perfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PerfilActionPerformed(evt);
+            }
+        });
+
+        Salir.setBackground(new java.awt.Color(153, 255, 255));
+        Salir.setMnemonic('3');
+        Salir.setText("Salir");
+        Salir.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 0, 255), null));
+        Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalirActionPerformed(evt);
+            }
+        });
+
+        ProfilePic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ProfilePic.setText("ProfilePic");
+        ProfilePic.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        javax.swing.GroupLayout HeaderLayout = new javax.swing.GroupLayout(Header);
+        Header.setLayout(HeaderLayout);
+        HeaderLayout.setHorizontalGroup(
+            HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(NombreApp, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ProfilePic, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(HeaderLayout.createSequentialGroup()
+                        .addComponent(Perfil)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BienvenidoMensage, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16))
+        );
+        HeaderLayout.setVerticalGroup(
+            HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(NombreApp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderLayout.createSequentialGroup()
+                .addGap(7, 7, 7)
+                .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(HeaderLayout.createSequentialGroup()
+                        .addComponent(BienvenidoMensage, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, Short.MAX_VALUE)
+                        .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Perfil)
+                            .addComponent(Salir)))
+                    .addComponent(ProfilePic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        getContentPane().add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         Background.setBackground(new java.awt.Color(255, 255, 255));
         Background.setMaximumSize(new java.awt.Dimension(720, 480));
         Background.setMinimumSize(new java.awt.Dimension(720, 480));
-        Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         BuscadorCiudad.setFont(new java.awt.Font("Roboto", 2, 12)); // NOI18N
         BuscadorCiudad.setForeground(new java.awt.Color(102, 102, 102));
@@ -82,11 +151,9 @@ public class V_HotelList extends javax.swing.JFrame {
                 BuscadorCiudadActionPerformed(evt);
             }
         });
-        Background.add(BuscadorCiudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 440, 29));
 
         CiudadesDisponibles.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
         CiudadesDisponibles.setText("Hoteles disponibles");
-        Background.add(CiudadesDisponibles, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 128, 29));
 
         BuscarBtn.setText("Buscar");
         BuscarBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -94,12 +161,11 @@ public class V_HotelList extends javax.swing.JFrame {
                 BuscarBtnActionPerformed(evt);
             }
         });
-        Background.add(BuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 170, 80, 29));
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         jPanel2.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel2.setLayout(new java.awt.GridLayout(1, 0));
+        jPanel2.setLayout(new java.awt.GridLayout());
 
         Hotel_InfoBox.setBackground(new java.awt.Color(204, 204, 204));
         Hotel_InfoBox.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -327,76 +393,36 @@ public class V_HotelList extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jPanel2);
 
-        Background.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 661, 300));
-
-        Header.setBackground(new java.awt.Color(204, 255, 255));
-
-        NombreApp.setFont(new java.awt.Font("Script MT Bold", 1, 24)); // NOI18N
-        NombreApp.setText("123 Viajes C.A");
-
-        BienvenidoMensage.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        BienvenidoMensage.setText("Bienvenido/a");
-
-        Perfil.setBackground(new java.awt.Color(153, 255, 255));
-        Perfil.setMnemonic('3');
-        Perfil.setText("Perfil");
-        Perfil.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PerfilActionPerformed(evt);
-            }
-        });
-
-        Salir.setBackground(new java.awt.Color(153, 255, 255));
-        Salir.setMnemonic('3');
-        Salir.setText("Salir");
-        Salir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SalirActionPerformed(evt);
-            }
-        });
-
-        ProfilePic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ProfilePic.setText("ProfilePic");
-        ProfilePic.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout HeaderLayout = new javax.swing.GroupLayout(Header);
-        Header.setLayout(HeaderLayout);
-        HeaderLayout.setHorizontalGroup(
-            HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(NombreApp, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 227, Short.MAX_VALUE)
-                .addComponent(ProfilePic, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(HeaderLayout.createSequentialGroup()
-                        .addComponent(Perfil)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Salir))
-                    .addComponent(BienvenidoMensage, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27))
+        javax.swing.GroupLayout BackgroundLayout = new javax.swing.GroupLayout(Background);
+        Background.setLayout(BackgroundLayout);
+        BackgroundLayout.setHorizontalGroup(
+            BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BackgroundLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 661, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(BackgroundLayout.createSequentialGroup()
+                        .addComponent(CiudadesDisponibles, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(2, 2, 2)
+                        .addComponent(BuscadorCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(BuscarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 29, Short.MAX_VALUE))
         );
-        HeaderLayout.setVerticalGroup(
-            HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(NombreApp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderLayout.createSequentialGroup()
-                .addGap(7, 7, 7)
-                .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(HeaderLayout.createSequentialGroup()
-                        .addGap(0, 6, Short.MAX_VALUE)
-                        .addComponent(BienvenidoMensage, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Perfil)
-                            .addComponent(Salir)))
-                    .addComponent(ProfilePic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+        BackgroundLayout.setVerticalGroup(
+            BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BackgroundLayout.createSequentialGroup()
+                .addGap(98, 98, 98)
+                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(BuscadorCiudad)
+                    .addComponent(BuscarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                    .addComponent(CiudadesDisponibles, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(10, 10, 10)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
-        Background.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 6, -1, -1));
-
-        getContentPane().add(Background, java.awt.BorderLayout.CENTER);
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 482));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -443,13 +469,10 @@ public class V_HotelList extends javax.swing.JFrame {
 
     private void PerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PerfilActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-        this.vistaModPerfil.setVisible(true);
     }//GEN-LAST:event_PerfilActionPerformed
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
         // TODO add your handling code here:
-
     }//GEN-LAST:event_SalirActionPerformed
 
     /**
