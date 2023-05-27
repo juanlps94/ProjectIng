@@ -114,8 +114,10 @@ public class V_Inicio extends javax.swing.JFrame {
         Background.setBackground(new java.awt.Color(255, 255, 255));
         Background.setForeground(new java.awt.Color(255, 255, 255));
 
+        Img_palafitos.setIcon(new javax.swing.ImageIcon("C:\\Users\\usuario\\Documents\\NetBeansProjects\\ProjectIng\\src\\main\\java\\Images\\hotel1.jpeg")); // NOI18N
         Img_palafitos.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        Img_piscina.setIcon(new javax.swing.ImageIcon("C:\\Users\\usuario\\Documents\\NetBeansProjects\\ProjectIng\\src\\main\\java\\Images\\hotel2.jpeg")); // NOI18N
         Img_piscina.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         ReservarBtn.setBackground(new java.awt.Color(153, 255, 255));

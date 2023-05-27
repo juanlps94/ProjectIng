@@ -44,7 +44,6 @@ public class V_Feedback extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(720, 480));
         setMinimumSize(new java.awt.Dimension(720, 480));
-        setPreferredSize(new java.awt.Dimension(720, 480));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -58,7 +57,7 @@ public class V_Feedback extends javax.swing.JFrame {
         BienvenidoMensage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         BienvenidoMensage.setText("Bienvenido/a");
 
-        Perfil.setBackground(new java.awt.Color(204, 255, 255));
+        Perfil.setBackground(new java.awt.Color(153, 255, 255));
         Perfil.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Perfil.setMnemonic('3');
         Perfil.setText("Perfil");
@@ -69,7 +68,7 @@ public class V_Feedback extends javax.swing.JFrame {
             }
         });
 
-        Salir.setBackground(new java.awt.Color(204, 255, 255));
+        Salir.setBackground(new java.awt.Color(153, 255, 255));
         Salir.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Salir.setMnemonic('3');
         Salir.setText("Salir");
@@ -120,34 +119,41 @@ public class V_Feedback extends javax.swing.JFrame {
 
         getContentPane().add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        Background.setBackground(new java.awt.Color(255, 255, 255));
         Background.setPreferredSize(new java.awt.Dimension(720, 480));
 
         ComentarioTA.setColumns(20);
+        ComentarioTA.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         ComentarioTA.setRows(5);
+        ComentarioTA.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
         jScrollPane2.setViewportView(ComentarioTA);
 
         ComentarioLabel.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
         ComentarioLabel.setText("Dejanos un comentario");
 
+        Puntaje.setBackground(new java.awt.Color(204, 255, 255));
+        Puntaje.setForeground(new java.awt.Color(0, 255, 255));
         Puntaje.setOrientation(javax.swing.JSlider.VERTICAL);
         Puntaje.setPaintLabels(true);
         Puntaje.setPaintTicks(true);
         Puntaje.setSnapToTicks(true);
         Puntaje.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        EnviarBtn.setBackground(new java.awt.Color(153, 255, 255));
         EnviarBtn.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         EnviarBtn.setText("Enviar");
+        EnviarBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
 
         javax.swing.GroupLayout BackgroundLayout = new javax.swing.GroupLayout(Background);
         Background.setLayout(BackgroundLayout);
         BackgroundLayout.setHorizontalGroup(
             BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
-                .addContainerGap(140, Short.MAX_VALUE)
+                .addContainerGap(107, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 416, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addComponent(Puntaje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(109, 109, 109))
+                .addGap(142, 142, 142))
             .addGroup(BackgroundLayout.createSequentialGroup()
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BackgroundLayout.createSequentialGroup()

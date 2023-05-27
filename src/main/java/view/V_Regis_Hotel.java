@@ -54,7 +54,6 @@ public class V_Regis_Hotel extends javax.swing.JFrame {
         setTitle("123 Viajes C.A.");
         setMaximumSize(new java.awt.Dimension(720, 480));
         setMinimumSize(new java.awt.Dimension(720, 480));
-        setPreferredSize(new java.awt.Dimension(720, 480));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

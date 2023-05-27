@@ -44,6 +44,10 @@ public class V_CityList extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
         ScrollBox = new javax.swing.JPanel();
+        CityInfoBox4 = new javax.swing.JPanel();
+        Ver4 = new javax.swing.JButton();
+        InfoCiudad4 = new javax.swing.JTextField();
+        Ciudad_Pic4 = new javax.swing.JLabel();
         CityInfoBox = new javax.swing.JPanel();
         Ver = new javax.swing.JButton();
         InfoCiudad = new javax.swing.JTextField();
@@ -56,10 +60,6 @@ public class V_CityList extends javax.swing.JFrame {
         Ver2 = new javax.swing.JButton();
         InfoCiudad2 = new javax.swing.JTextField();
         Ciudad_Pic2 = new javax.swing.JLabel();
-        CityInfoBox3 = new javax.swing.JPanel();
-        Ver3 = new javax.swing.JButton();
-        InfoCiudad3 = new javax.swing.JTextField();
-        Ciudad_Pic3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("123 Viajes C.A.");
@@ -80,7 +80,7 @@ public class V_CityList extends javax.swing.JFrame {
         BienvenidoMensage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         BienvenidoMensage.setText("Bienvenido/a");
 
-        Perfil.setBackground(new java.awt.Color(204, 255, 255));
+        Perfil.setBackground(new java.awt.Color(153, 255, 255));
         Perfil.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Perfil.setMnemonic('3');
         Perfil.setText("Perfil");
@@ -91,7 +91,7 @@ public class V_CityList extends javax.swing.JFrame {
             }
         });
 
-        Salir.setBackground(new java.awt.Color(204, 255, 255));
+        Salir.setBackground(new java.awt.Color(153, 255, 255));
         Salir.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Salir.setMnemonic('3');
         Salir.setText("Salir");
@@ -143,6 +143,7 @@ public class V_CityList extends javax.swing.JFrame {
         getContentPane().add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         Background.setBackground(new java.awt.Color(255, 255, 255));
+        Background.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
         Background.setMaximumSize(new java.awt.Dimension(720, 480));
         Background.setMinimumSize(new java.awt.Dimension(720, 480));
 
@@ -159,30 +160,94 @@ public class V_CityList extends javax.swing.JFrame {
         CiudadesDisponibles.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
         CiudadesDisponibles.setText("Ciudades disponibles");
 
+        BuscarBtn.setBackground(new java.awt.Color(204, 255, 255));
         BuscarBtn.setText("Buscar");
+        BuscarBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 255)));
         BuscarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BuscarBtnActionPerformed(evt);
             }
         });
 
+        jScrollPane1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
-        jPanel2.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setOpaque(false);
         jPanel2.setLayout(new java.awt.GridLayout(1, 0));
 
-        CityInfoBox.setBackground(new java.awt.Color(204, 204, 204));
-        CityInfoBox.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        ScrollBox.setBackground(new java.awt.Color(0, 255, 255));
+        ScrollBox.setOpaque(false);
+
+        CityInfoBox4.setBackground(new java.awt.Color(204, 255, 255));
+        CityInfoBox4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        CityInfoBox4.setAutoscrolls(true);
+        CityInfoBox4.setMaximumSize(new java.awt.Dimension(50, 32767));
+
+        Ver4.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        Ver4.setText("Reservar");
+        Ver4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        Ver4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Ver4ActionPerformed(evt);
+            }
+        });
+
+        InfoCiudad4.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        InfoCiudad4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        InfoCiudad4.setText("Info Ciudad");
+        InfoCiudad4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InfoCiudad4ActionPerformed(evt);
+            }
+        });
+
+        Ciudad_Pic4.setBackground(new java.awt.Color(153, 255, 255));
+        Ciudad_Pic4.setForeground(new java.awt.Color(153, 153, 153));
+        Ciudad_Pic4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Ciudad_Pic4.setText("Pic");
+        Ciudad_Pic4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        javax.swing.GroupLayout CityInfoBox4Layout = new javax.swing.GroupLayout(CityInfoBox4);
+        CityInfoBox4.setLayout(CityInfoBox4Layout);
+        CityInfoBox4Layout.setHorizontalGroup(
+            CityInfoBox4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CityInfoBox4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Ciudad_Pic4, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(InfoCiudad4, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Ver4, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        CityInfoBox4Layout.setVerticalGroup(
+            CityInfoBox4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CityInfoBox4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(CityInfoBox4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Ciudad_Pic4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, CityInfoBox4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(InfoCiudad4, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
+                        .addComponent(Ver4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+
+        CityInfoBox.setBackground(new java.awt.Color(204, 255, 255));
+        CityInfoBox.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
         CityInfoBox.setAutoscrolls(true);
         CityInfoBox.setMaximumSize(new java.awt.Dimension(50, 32767));
 
+        Ver.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Ver.setText("Reservar");
+        Ver.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
         Ver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VerActionPerformed(evt);
             }
         });
 
+        InfoCiudad.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         InfoCiudad.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         InfoCiudad.setText("Info Ciudad");
         InfoCiudad.addActionListener(new java.awt.event.ActionListener() {
@@ -191,6 +256,8 @@ public class V_CityList extends javax.swing.JFrame {
             }
         });
 
+        Ciudad_Pic.setBackground(new java.awt.Color(153, 255, 255));
+        Ciudad_Pic.setForeground(new java.awt.Color(153, 153, 153));
         Ciudad_Pic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Ciudad_Pic.setText("Pic");
         Ciudad_Pic.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -205,7 +272,7 @@ public class V_CityList extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(InfoCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Ver)
+                .addComponent(Ver, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         CityInfoBoxLayout.setVerticalGroup(
@@ -220,18 +287,21 @@ public class V_CityList extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        CityInfoBox1.setBackground(new java.awt.Color(204, 204, 204));
-        CityInfoBox1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        CityInfoBox1.setBackground(new java.awt.Color(204, 255, 255));
+        CityInfoBox1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
         CityInfoBox1.setAutoscrolls(true);
         CityInfoBox1.setMaximumSize(new java.awt.Dimension(50, 32767));
 
+        Ver1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Ver1.setText("Reservar");
+        Ver1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
         Ver1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Ver1ActionPerformed(evt);
             }
         });
 
+        InfoCiudad1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         InfoCiudad1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         InfoCiudad1.setText("Info Ciudad");
         InfoCiudad1.addActionListener(new java.awt.event.ActionListener() {
@@ -240,6 +310,8 @@ public class V_CityList extends javax.swing.JFrame {
             }
         });
 
+        Ciudad_Pic1.setBackground(new java.awt.Color(153, 255, 255));
+        Ciudad_Pic1.setForeground(new java.awt.Color(153, 153, 153));
         Ciudad_Pic1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Ciudad_Pic1.setText("Pic");
         Ciudad_Pic1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -254,7 +326,7 @@ public class V_CityList extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(InfoCiudad1, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Ver1)
+                .addComponent(Ver1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         CityInfoBox1Layout.setVerticalGroup(
@@ -269,18 +341,21 @@ public class V_CityList extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        CityInfoBox2.setBackground(new java.awt.Color(204, 204, 204));
-        CityInfoBox2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        CityInfoBox2.setBackground(new java.awt.Color(204, 255, 255));
+        CityInfoBox2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
         CityInfoBox2.setAutoscrolls(true);
         CityInfoBox2.setMaximumSize(new java.awt.Dimension(50, 32767));
 
+        Ver2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Ver2.setText("Reservar");
+        Ver2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
         Ver2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Ver2ActionPerformed(evt);
             }
         });
 
+        InfoCiudad2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         InfoCiudad2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         InfoCiudad2.setText("Info Ciudad");
         InfoCiudad2.addActionListener(new java.awt.event.ActionListener() {
@@ -289,6 +364,8 @@ public class V_CityList extends javax.swing.JFrame {
             }
         });
 
+        Ciudad_Pic2.setBackground(new java.awt.Color(153, 255, 255));
+        Ciudad_Pic2.setForeground(new java.awt.Color(153, 153, 153));
         Ciudad_Pic2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Ciudad_Pic2.setText("Pic");
         Ciudad_Pic2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -303,7 +380,7 @@ public class V_CityList extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(InfoCiudad2, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Ver2)
+                .addComponent(Ver2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         CityInfoBox2Layout.setVerticalGroup(
@@ -318,79 +395,29 @@ public class V_CityList extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        CityInfoBox3.setBackground(new java.awt.Color(204, 204, 204));
-        CityInfoBox3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        CityInfoBox3.setAutoscrolls(true);
-        CityInfoBox3.setMaximumSize(new java.awt.Dimension(50, 32767));
-
-        Ver3.setText("Reservar");
-        Ver3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Ver3ActionPerformed(evt);
-            }
-        });
-
-        InfoCiudad3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        InfoCiudad3.setText("Info Ciudad");
-        InfoCiudad3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InfoCiudad3ActionPerformed(evt);
-            }
-        });
-
-        Ciudad_Pic3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Ciudad_Pic3.setText("Pic");
-        Ciudad_Pic3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout CityInfoBox3Layout = new javax.swing.GroupLayout(CityInfoBox3);
-        CityInfoBox3.setLayout(CityInfoBox3Layout);
-        CityInfoBox3Layout.setHorizontalGroup(
-            CityInfoBox3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CityInfoBox3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Ciudad_Pic3, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(InfoCiudad3, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Ver3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        CityInfoBox3Layout.setVerticalGroup(
-            CityInfoBox3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CityInfoBox3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(CityInfoBox3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Ciudad_Pic3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, CityInfoBox3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(InfoCiudad3, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
-                        .addComponent(Ver3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-
         javax.swing.GroupLayout ScrollBoxLayout = new javax.swing.GroupLayout(ScrollBox);
         ScrollBox.setLayout(ScrollBoxLayout);
         ScrollBoxLayout.setHorizontalGroup(
             ScrollBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ScrollBoxLayout.createSequentialGroup()
-                .addGroup(ScrollBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CityInfoBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CityInfoBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CityInfoBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CityInfoBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 30, Short.MAX_VALUE))
+                .addGroup(ScrollBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(CityInfoBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(CityInfoBox2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(CityInfoBox4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(CityInfoBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 44, Short.MAX_VALUE))
         );
         ScrollBoxLayout.setVerticalGroup(
             ScrollBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ScrollBoxLayout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(CityInfoBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(CityInfoBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(CityInfoBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CityInfoBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(CityInfoBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 26, Short.MAX_VALUE))
         );
 
         jPanel2.add(ScrollBox);
@@ -428,7 +455,7 @@ public class V_CityList extends javax.swing.JFrame {
                 .addContainerGap(41, Short.MAX_VALUE))
         );
 
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -465,14 +492,6 @@ public class V_CityList extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_InfoCiudad2ActionPerformed
 
-    private void Ver3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ver3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Ver3ActionPerformed
-
-    private void InfoCiudad3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfoCiudad3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_InfoCiudad3ActionPerformed
-
     private void PerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PerfilActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PerfilActionPerformed
@@ -480,6 +499,14 @@ public class V_CityList extends javax.swing.JFrame {
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_SalirActionPerformed
+
+    private void Ver4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ver4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Ver4ActionPerformed
+
+    private void InfoCiudad4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfoCiudad4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_InfoCiudad4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -493,17 +520,17 @@ public class V_CityList extends javax.swing.JFrame {
     private javax.swing.JPanel CityInfoBox;
     private javax.swing.JPanel CityInfoBox1;
     private javax.swing.JPanel CityInfoBox2;
-    private javax.swing.JPanel CityInfoBox3;
+    private javax.swing.JPanel CityInfoBox4;
     private javax.swing.JLabel Ciudad_Pic;
     private javax.swing.JLabel Ciudad_Pic1;
     private javax.swing.JLabel Ciudad_Pic2;
-    private javax.swing.JLabel Ciudad_Pic3;
+    private javax.swing.JLabel Ciudad_Pic4;
     private javax.swing.JLabel CiudadesDisponibles;
     private javax.swing.JPanel Header;
     private javax.swing.JTextField InfoCiudad;
     private javax.swing.JTextField InfoCiudad1;
     private javax.swing.JTextField InfoCiudad2;
-    private javax.swing.JTextField InfoCiudad3;
+    private javax.swing.JTextField InfoCiudad4;
     private javax.swing.JLabel NombreApp;
     private javax.swing.JButton Perfil;
     private javax.swing.JLabel ProfilePic;
@@ -512,7 +539,7 @@ public class V_CityList extends javax.swing.JFrame {
     private javax.swing.JButton Ver;
     private javax.swing.JButton Ver1;
     private javax.swing.JButton Ver2;
-    private javax.swing.JButton Ver3;
+    private javax.swing.JButton Ver4;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables

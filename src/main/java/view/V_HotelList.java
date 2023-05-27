@@ -47,19 +47,19 @@ public class V_HotelList extends javax.swing.JFrame {
         Hotel_InfoBox = new javax.swing.JPanel();
         Ver = new javax.swing.JButton();
         InfoHotel = new javax.swing.JTextField();
-        Ciudad_Pic = new javax.swing.JLabel();
-        Hotel_InfoBox1 = new javax.swing.JPanel();
-        Ver1 = new javax.swing.JButton();
-        InfoHotel1 = new javax.swing.JTextField();
-        Ciudad_Pic1 = new javax.swing.JLabel();
+        Hotel_Pic = new javax.swing.JLabel();
         Hotel_InfoBox2 = new javax.swing.JPanel();
         Ver2 = new javax.swing.JButton();
         InfoHotel2 = new javax.swing.JTextField();
-        Ciudad_Pic2 = new javax.swing.JLabel();
-        Hotel_InfoBox3 = new javax.swing.JPanel();
-        Ver3 = new javax.swing.JButton();
-        InfoHotel3 = new javax.swing.JTextField();
-        Ciudad_Pic3 = new javax.swing.JLabel();
+        Hotel_Pic1 = new javax.swing.JLabel();
+        Hotel_InfoBox7 = new javax.swing.JPanel();
+        Ver7 = new javax.swing.JButton();
+        InfoHotel7 = new javax.swing.JTextField();
+        Hotel_Pic5 = new javax.swing.JLabel();
+        Hotel_InfoBox8 = new javax.swing.JPanel();
+        Ver8 = new javax.swing.JButton();
+        InfoHotel8 = new javax.swing.JTextField();
+        Hotel_Pic6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("123 Viajes C.A.");
@@ -79,7 +79,7 @@ public class V_HotelList extends javax.swing.JFrame {
         BienvenidoMensage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         BienvenidoMensage.setText("Bienvenido/a");
 
-        Perfil.setBackground(new java.awt.Color(204, 255, 255));
+        Perfil.setBackground(new java.awt.Color(153, 255, 255));
         Perfil.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Perfil.setMnemonic('3');
         Perfil.setText("Perfil");
@@ -90,7 +90,7 @@ public class V_HotelList extends javax.swing.JFrame {
             }
         });
 
-        Salir.setBackground(new java.awt.Color(204, 255, 255));
+        Salir.setBackground(new java.awt.Color(153, 255, 255));
         Salir.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Salir.setMnemonic('3');
         Salir.setText("Salir");
@@ -158,30 +158,43 @@ public class V_HotelList extends javax.swing.JFrame {
         CiudadesDisponibles.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
         CiudadesDisponibles.setText("Hoteles disponibles");
 
+        BuscarBtn.setBackground(new java.awt.Color(204, 255, 255));
+        BuscarBtn.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         BuscarBtn.setText("Buscar");
+        BuscarBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
         BuscarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BuscarBtnActionPerformed(evt);
             }
         });
 
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 255, 255)));
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
-        Scroll_BGPanel.setBackground(new java.awt.Color(204, 255, 204));
-        Scroll_BGPanel.setLayout(new java.awt.GridLayout());
+        Scroll_BGPanel.setBackground(new java.awt.Color(255, 255, 255));
+        Scroll_BGPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
+        Scroll_BGPanel.setOpaque(false);
+        Scroll_BGPanel.setLayout(new java.awt.GridLayout(1, 0));
 
-        Hotel_InfoBox.setBackground(new java.awt.Color(204, 204, 204));
-        Hotel_InfoBox.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        ScrollBox.setBackground(new java.awt.Color(255, 255, 255));
+        ScrollBox.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
+        ScrollBox.setOpaque(false);
+
+        Hotel_InfoBox.setBackground(new java.awt.Color(204, 255, 255));
+        Hotel_InfoBox.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
         Hotel_InfoBox.setAutoscrolls(true);
         Hotel_InfoBox.setMaximumSize(new java.awt.Dimension(50, 32767));
 
+        Ver.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Ver.setText("Reservar");
+        Ver.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
         Ver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VerActionPerformed(evt);
             }
         });
 
+        InfoHotel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         InfoHotel.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         InfoHotel.setText("Info Hotel");
         InfoHotel.addActionListener(new java.awt.event.ActionListener() {
@@ -190,9 +203,11 @@ public class V_HotelList extends javax.swing.JFrame {
             }
         });
 
-        Ciudad_Pic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Ciudad_Pic.setText("Pic");
-        Ciudad_Pic.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Hotel_Pic.setBackground(new java.awt.Color(153, 255, 255));
+        Hotel_Pic.setForeground(new java.awt.Color(153, 153, 153));
+        Hotel_Pic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Hotel_Pic.setText("Pic");
+        Hotel_Pic.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout Hotel_InfoBoxLayout = new javax.swing.GroupLayout(Hotel_InfoBox);
         Hotel_InfoBox.setLayout(Hotel_InfoBoxLayout);
@@ -200,86 +215,40 @@ public class V_HotelList extends javax.swing.JFrame {
             Hotel_InfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Hotel_InfoBoxLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Ciudad_Pic, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Hotel_Pic, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(InfoHotel, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Ver)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(Ver, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         Hotel_InfoBoxLayout.setVerticalGroup(
             Hotel_InfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Hotel_InfoBoxLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(Hotel_InfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Ciudad_Pic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Hotel_Pic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Hotel_InfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(InfoHotel, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
                         .addComponent(Ver, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
-        Hotel_InfoBox1.setBackground(new java.awt.Color(204, 204, 204));
-        Hotel_InfoBox1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        Hotel_InfoBox1.setAutoscrolls(true);
-        Hotel_InfoBox1.setMaximumSize(new java.awt.Dimension(50, 32767));
-
-        Ver1.setText("Reservar");
-        Ver1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Ver1ActionPerformed(evt);
-            }
-        });
-
-        InfoHotel1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        InfoHotel1.setText("Info Ciudad");
-        InfoHotel1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InfoHotel1ActionPerformed(evt);
-            }
-        });
-
-        Ciudad_Pic1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Ciudad_Pic1.setText("Pic");
-        Ciudad_Pic1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout Hotel_InfoBox1Layout = new javax.swing.GroupLayout(Hotel_InfoBox1);
-        Hotel_InfoBox1.setLayout(Hotel_InfoBox1Layout);
-        Hotel_InfoBox1Layout.setHorizontalGroup(
-            Hotel_InfoBox1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Hotel_InfoBox1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Ciudad_Pic1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(InfoHotel1, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Ver1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        Hotel_InfoBox1Layout.setVerticalGroup(
-            Hotel_InfoBox1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Hotel_InfoBox1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(Hotel_InfoBox1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Ciudad_Pic1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Hotel_InfoBox1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(InfoHotel1, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
-                        .addComponent(Ver1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-
-        Hotel_InfoBox2.setBackground(new java.awt.Color(204, 204, 204));
-        Hotel_InfoBox2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        Hotel_InfoBox2.setBackground(new java.awt.Color(204, 255, 255));
+        Hotel_InfoBox2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
         Hotel_InfoBox2.setAutoscrolls(true);
         Hotel_InfoBox2.setMaximumSize(new java.awt.Dimension(50, 32767));
 
+        Ver2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Ver2.setText("Reservar");
+        Ver2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
         Ver2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Ver2ActionPerformed(evt);
             }
         });
 
+        InfoHotel2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         InfoHotel2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         InfoHotel2.setText("Info Hotel");
         InfoHotel2.addActionListener(new java.awt.event.ActionListener() {
@@ -288,9 +257,11 @@ public class V_HotelList extends javax.swing.JFrame {
             }
         });
 
-        Ciudad_Pic2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Ciudad_Pic2.setText("Pic");
-        Ciudad_Pic2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Hotel_Pic1.setBackground(new java.awt.Color(153, 255, 255));
+        Hotel_Pic1.setForeground(new java.awt.Color(153, 153, 153));
+        Hotel_Pic1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Hotel_Pic1.setText("Pic");
+        Hotel_Pic1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout Hotel_InfoBox2Layout = new javax.swing.GroupLayout(Hotel_InfoBox2);
         Hotel_InfoBox2.setLayout(Hotel_InfoBox2Layout);
@@ -298,71 +269,130 @@ public class V_HotelList extends javax.swing.JFrame {
             Hotel_InfoBox2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Hotel_InfoBox2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Ciudad_Pic2, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Hotel_Pic1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(InfoHotel2, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Ver2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(Ver2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         Hotel_InfoBox2Layout.setVerticalGroup(
             Hotel_InfoBox2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Hotel_InfoBox2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(Hotel_InfoBox2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Ciudad_Pic2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Hotel_Pic1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Hotel_InfoBox2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(InfoHotel2, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
                         .addComponent(Ver2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
-        Hotel_InfoBox3.setBackground(new java.awt.Color(204, 204, 204));
-        Hotel_InfoBox3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        Hotel_InfoBox3.setAutoscrolls(true);
-        Hotel_InfoBox3.setMaximumSize(new java.awt.Dimension(50, 32767));
+        Hotel_InfoBox7.setBackground(new java.awt.Color(204, 255, 255));
+        Hotel_InfoBox7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        Hotel_InfoBox7.setAutoscrolls(true);
+        Hotel_InfoBox7.setMaximumSize(new java.awt.Dimension(50, 32767));
 
-        Ver3.setText("Reservar");
-        Ver3.addActionListener(new java.awt.event.ActionListener() {
+        Ver7.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        Ver7.setText("Reservar");
+        Ver7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        Ver7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Ver3ActionPerformed(evt);
+                Ver7ActionPerformed(evt);
             }
         });
 
-        InfoHotel3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        InfoHotel3.setText("Info Ciudad");
-        InfoHotel3.addActionListener(new java.awt.event.ActionListener() {
+        InfoHotel7.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        InfoHotel7.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        InfoHotel7.setText("Info Hotel");
+        InfoHotel7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InfoHotel3ActionPerformed(evt);
+                InfoHotel7ActionPerformed(evt);
             }
         });
 
-        Ciudad_Pic3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Ciudad_Pic3.setText("Pic");
-        Ciudad_Pic3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Hotel_Pic5.setBackground(new java.awt.Color(153, 255, 255));
+        Hotel_Pic5.setForeground(new java.awt.Color(153, 153, 153));
+        Hotel_Pic5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Hotel_Pic5.setText("Pic");
+        Hotel_Pic5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        javax.swing.GroupLayout Hotel_InfoBox3Layout = new javax.swing.GroupLayout(Hotel_InfoBox3);
-        Hotel_InfoBox3.setLayout(Hotel_InfoBox3Layout);
-        Hotel_InfoBox3Layout.setHorizontalGroup(
-            Hotel_InfoBox3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Hotel_InfoBox3Layout.createSequentialGroup()
+        javax.swing.GroupLayout Hotel_InfoBox7Layout = new javax.swing.GroupLayout(Hotel_InfoBox7);
+        Hotel_InfoBox7.setLayout(Hotel_InfoBox7Layout);
+        Hotel_InfoBox7Layout.setHorizontalGroup(
+            Hotel_InfoBox7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Hotel_InfoBox7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Ciudad_Pic3, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Hotel_Pic5, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(InfoHotel3, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(InfoHotel7, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Ver3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(Ver7, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(37, Short.MAX_VALUE))
         );
-        Hotel_InfoBox3Layout.setVerticalGroup(
-            Hotel_InfoBox3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Hotel_InfoBox3Layout.createSequentialGroup()
+        Hotel_InfoBox7Layout.setVerticalGroup(
+            Hotel_InfoBox7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Hotel_InfoBox7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(Hotel_InfoBox3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Ciudad_Pic3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Hotel_InfoBox3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(InfoHotel3, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
-                        .addComponent(Ver3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(Hotel_InfoBox7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Hotel_Pic5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Hotel_InfoBox7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(InfoHotel7, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
+                        .addComponent(Ver7, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+
+        Hotel_InfoBox8.setBackground(new java.awt.Color(204, 255, 255));
+        Hotel_InfoBox8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        Hotel_InfoBox8.setAutoscrolls(true);
+        Hotel_InfoBox8.setMaximumSize(new java.awt.Dimension(50, 32767));
+
+        Ver8.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        Ver8.setText("Reservar");
+        Ver8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        Ver8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Ver8ActionPerformed(evt);
+            }
+        });
+
+        InfoHotel8.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        InfoHotel8.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        InfoHotel8.setText("Info Hotel");
+        InfoHotel8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InfoHotel8ActionPerformed(evt);
+            }
+        });
+
+        Hotel_Pic6.setBackground(new java.awt.Color(153, 255, 255));
+        Hotel_Pic6.setForeground(new java.awt.Color(153, 153, 153));
+        Hotel_Pic6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Hotel_Pic6.setText("Pic");
+        Hotel_Pic6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        javax.swing.GroupLayout Hotel_InfoBox8Layout = new javax.swing.GroupLayout(Hotel_InfoBox8);
+        Hotel_InfoBox8.setLayout(Hotel_InfoBox8Layout);
+        Hotel_InfoBox8Layout.setHorizontalGroup(
+            Hotel_InfoBox8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Hotel_InfoBox8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Hotel_Pic6, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(InfoHotel8, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Ver8, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(37, Short.MAX_VALUE))
+        );
+        Hotel_InfoBox8Layout.setVerticalGroup(
+            Hotel_InfoBox8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Hotel_InfoBox8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Hotel_InfoBox8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Hotel_Pic6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Hotel_InfoBox8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(InfoHotel8, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
+                        .addComponent(Ver8, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -370,26 +400,22 @@ public class V_HotelList extends javax.swing.JFrame {
         ScrollBox.setLayout(ScrollBoxLayout);
         ScrollBoxLayout.setHorizontalGroup(
             ScrollBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ScrollBoxLayout.createSequentialGroup()
-                .addGroup(ScrollBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Hotel_InfoBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Hotel_InfoBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Hotel_InfoBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Hotel_InfoBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 30, Short.MAX_VALUE))
+            .addComponent(Hotel_InfoBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Hotel_InfoBox2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Hotel_InfoBox7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Hotel_InfoBox8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         ScrollBoxLayout.setVerticalGroup(
             ScrollBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ScrollBoxLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Hotel_InfoBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Hotel_InfoBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Hotel_InfoBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Hotel_InfoBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Hotel_InfoBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Hotel_InfoBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(Hotel_InfoBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(105, Short.MAX_VALUE))
         );
 
         Scroll_BGPanel.add(ScrollBox);
@@ -438,6 +464,14 @@ public class V_HotelList extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BuscarBtnActionPerformed
 
+    private void PerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PerfilActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PerfilActionPerformed
+
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SalirActionPerformed
+
     private void VerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_VerActionPerformed
@@ -445,14 +479,6 @@ public class V_HotelList extends javax.swing.JFrame {
     private void InfoHotelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfoHotelActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_InfoHotelActionPerformed
-
-    private void Ver1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ver1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Ver1ActionPerformed
-
-    private void InfoHotel1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfoHotel1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_InfoHotel1ActionPerformed
 
     private void Ver2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ver2ActionPerformed
         // TODO add your handling code here:
@@ -462,21 +488,21 @@ public class V_HotelList extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_InfoHotel2ActionPerformed
 
-    private void Ver3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ver3ActionPerformed
+    private void Ver7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ver7ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Ver3ActionPerformed
+    }//GEN-LAST:event_Ver7ActionPerformed
 
-    private void InfoHotel3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfoHotel3ActionPerformed
+    private void InfoHotel7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfoHotel7ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_InfoHotel3ActionPerformed
+    }//GEN-LAST:event_InfoHotel7ActionPerformed
 
-    private void PerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PerfilActionPerformed
+    private void Ver8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ver8ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_PerfilActionPerformed
+    }//GEN-LAST:event_Ver8ActionPerformed
 
-    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+    private void InfoHotel8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfoHotel8ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SalirActionPerformed
+    }//GEN-LAST:event_InfoHotel8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -487,20 +513,29 @@ public class V_HotelList extends javax.swing.JFrame {
     private javax.swing.JLabel BienvenidoMensage;
     private javax.swing.JTextField BuscadorCiudad;
     private javax.swing.JButton BuscarBtn;
-    private javax.swing.JLabel Ciudad_Pic;
-    private javax.swing.JLabel Ciudad_Pic1;
-    private javax.swing.JLabel Ciudad_Pic2;
-    private javax.swing.JLabel Ciudad_Pic3;
     private javax.swing.JLabel CiudadesDisponibles;
     private javax.swing.JPanel Header;
     private javax.swing.JPanel Hotel_InfoBox;
-    private javax.swing.JPanel Hotel_InfoBox1;
     private javax.swing.JPanel Hotel_InfoBox2;
-    private javax.swing.JPanel Hotel_InfoBox3;
+    private javax.swing.JPanel Hotel_InfoBox4;
+    private javax.swing.JPanel Hotel_InfoBox5;
+    private javax.swing.JPanel Hotel_InfoBox6;
+    private javax.swing.JPanel Hotel_InfoBox7;
+    private javax.swing.JPanel Hotel_InfoBox8;
+    private javax.swing.JLabel Hotel_Pic;
+    private javax.swing.JLabel Hotel_Pic1;
+    private javax.swing.JLabel Hotel_Pic2;
+    private javax.swing.JLabel Hotel_Pic3;
+    private javax.swing.JLabel Hotel_Pic4;
+    private javax.swing.JLabel Hotel_Pic5;
+    private javax.swing.JLabel Hotel_Pic6;
     private javax.swing.JTextField InfoHotel;
-    private javax.swing.JTextField InfoHotel1;
     private javax.swing.JTextField InfoHotel2;
-    private javax.swing.JTextField InfoHotel3;
+    private javax.swing.JTextField InfoHotel4;
+    private javax.swing.JTextField InfoHotel5;
+    private javax.swing.JTextField InfoHotel6;
+    private javax.swing.JTextField InfoHotel7;
+    private javax.swing.JTextField InfoHotel8;
     private javax.swing.JLabel NombreApp;
     private javax.swing.JButton Perfil;
     private javax.swing.JLabel ProfilePic;
@@ -508,9 +543,12 @@ public class V_HotelList extends javax.swing.JFrame {
     private javax.swing.JPanel ScrollBox;
     private javax.swing.JPanel Scroll_BGPanel;
     private javax.swing.JButton Ver;
-    private javax.swing.JButton Ver1;
     private javax.swing.JButton Ver2;
-    private javax.swing.JButton Ver3;
+    private javax.swing.JButton Ver4;
+    private javax.swing.JButton Ver5;
+    private javax.swing.JButton Ver6;
+    private javax.swing.JButton Ver7;
+    private javax.swing.JButton Ver8;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

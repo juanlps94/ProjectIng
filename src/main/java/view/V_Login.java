@@ -56,8 +56,10 @@ public class V_Login extends javax.swing.JFrame {
         NombreApp.setFont(new java.awt.Font("Script MT Bold", 1, 24)); // NOI18N
         NombreApp.setText("123 Viajes C.A");
 
+        RegistrarseBtn.setBackground(new java.awt.Color(153, 255, 255));
         RegistrarseBtn.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         RegistrarseBtn.setText("Registrarse");
+        RegistrarseBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
         RegistrarseBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RegistrarseBtnActionPerformed(evt);
@@ -72,7 +74,7 @@ public class V_Login extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(NombreApp, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 366, Short.MAX_VALUE)
-                .addComponent(RegistrarseBtn)
+                .addComponent(RegistrarseBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
         HeaderLoginLayout.setVerticalGroup(
@@ -90,7 +92,7 @@ public class V_Login extends javax.swing.JFrame {
         Background.setPreferredSize(new java.awt.Dimension(720, 480));
 
         BoxBackground.setBackground(new java.awt.Color(204, 255, 255));
-        BoxBackground.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BoxBackground.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
 
         UserLabel.setText("Usuario");
 
@@ -176,7 +178,7 @@ public class V_Login extends javax.swing.JFrame {
                 .addComponent(CredencialesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BoxBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addContainerGap(161, Short.MAX_VALUE))
         );
 
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(-36, 46, 1050, 430));
