@@ -34,10 +34,10 @@ public class V_Feedback extends javax.swing.JFrame {
         ProfilePic = new javax.swing.JLabel();
         Background = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        jLabel2 = new javax.swing.JLabel();
-        jSlider1 = new javax.swing.JSlider();
-        jButton2 = new javax.swing.JButton();
+        ComentarioTA = new javax.swing.JTextArea();
+        ComentarioLabel = new javax.swing.JLabel();
+        Puntaje = new javax.swing.JSlider();
+        EnviarBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("123 Viajes C.A.");
@@ -52,25 +52,28 @@ public class V_Feedback extends javax.swing.JFrame {
         Header.setPreferredSize(new java.awt.Dimension(720, 80));
 
         NombreApp.setFont(new java.awt.Font("Script MT Bold", 1, 24)); // NOI18N
-        NombreApp.setText("123 Viajes C.A");
+        NombreApp.setText(" 123 Viajes C.A");
 
         BienvenidoMensage.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        BienvenidoMensage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         BienvenidoMensage.setText("Bienvenido/a");
 
-        Perfil.setBackground(new java.awt.Color(153, 255, 255));
+        Perfil.setBackground(new java.awt.Color(204, 255, 255));
+        Perfil.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Perfil.setMnemonic('3');
         Perfil.setText("Perfil");
-        Perfil.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 0, 255), null));
+        Perfil.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 255, 255)));
         Perfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PerfilActionPerformed(evt);
             }
         });
 
-        Salir.setBackground(new java.awt.Color(153, 255, 255));
+        Salir.setBackground(new java.awt.Color(204, 255, 255));
+        Salir.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Salir.setMnemonic('3');
         Salir.setText("Salir");
-        Salir.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 0, 255), null));
+        Salir.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 255, 255)));
         Salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SalirActionPerformed(evt);
@@ -79,23 +82,23 @@ public class V_Feedback extends javax.swing.JFrame {
 
         ProfilePic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ProfilePic.setText("ProfilePic");
-        ProfilePic.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ProfilePic.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 255)));
 
         javax.swing.GroupLayout HeaderLayout = new javax.swing.GroupLayout(Header);
         Header.setLayout(HeaderLayout);
         HeaderLayout.setHorizontalGroup(
             HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addComponent(NombreApp, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 302, Short.MAX_VALUE)
                 .addComponent(ProfilePic, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(HeaderLayout.createSequentialGroup()
-                        .addComponent(Perfil)
+                        .addComponent(Perfil, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Salir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(BienvenidoMensage, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(16, 16, 16))
         );
@@ -107,10 +110,10 @@ public class V_Feedback extends javax.swing.JFrame {
                 .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(HeaderLayout.createSequentialGroup()
                         .addComponent(BienvenidoMensage, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, Short.MAX_VALUE)
-                        .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Perfil)
-                            .addComponent(Salir)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Salir, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                            .addComponent(Perfil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(ProfilePic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -119,21 +122,21 @@ public class V_Feedback extends javax.swing.JFrame {
 
         Background.setPreferredSize(new java.awt.Dimension(720, 480));
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
+        ComentarioTA.setColumns(20);
+        ComentarioTA.setRows(5);
+        jScrollPane2.setViewportView(ComentarioTA);
 
-        jLabel2.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
-        jLabel2.setText("Dejanos un comentario");
+        ComentarioLabel.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
+        ComentarioLabel.setText("Dejanos un comentario");
 
-        jSlider1.setOrientation(javax.swing.JSlider.VERTICAL);
-        jSlider1.setPaintLabels(true);
-        jSlider1.setPaintTicks(true);
-        jSlider1.setSnapToTicks(true);
-        jSlider1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Puntaje.setOrientation(javax.swing.JSlider.VERTICAL);
+        Puntaje.setPaintLabels(true);
+        Puntaje.setPaintTicks(true);
+        Puntaje.setSnapToTicks(true);
+        Puntaje.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jButton2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jButton2.setText("Enviar");
+        EnviarBtn.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        EnviarBtn.setText("Enviar");
 
         javax.swing.GroupLayout BackgroundLayout = new javax.swing.GroupLayout(Background);
         Background.setLayout(BackgroundLayout);
@@ -143,29 +146,29 @@ public class V_Feedback extends javax.swing.JFrame {
                 .addContainerGap(140, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 416, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
-                .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Puntaje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(109, 109, 109))
             .addGroup(BackgroundLayout.createSequentialGroup()
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BackgroundLayout.createSequentialGroup()
                         .addGap(303, 303, 303)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(EnviarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(BackgroundLayout.createSequentialGroup()
                         .addGap(230, 230, 230)
-                        .addComponent(jLabel2)))
+                        .addComponent(ComentarioLabel)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         BackgroundLayout.setVerticalGroup(
             BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BackgroundLayout.createSequentialGroup()
                 .addGap(83, 83, 83)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ComentarioLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jSlider1, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
+                    .addComponent(Puntaje, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
                     .addComponent(jScrollPane2))
                 .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EnviarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 52, Short.MAX_VALUE))
         );
 
@@ -190,15 +193,15 @@ public class V_Feedback extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
     private javax.swing.JLabel BienvenidoMensage;
+    private javax.swing.JLabel ComentarioLabel;
+    private javax.swing.JTextArea ComentarioTA;
+    private javax.swing.JButton EnviarBtn;
     private javax.swing.JPanel Header;
     private javax.swing.JLabel NombreApp;
     private javax.swing.JButton Perfil;
     private javax.swing.JLabel ProfilePic;
+    private javax.swing.JSlider Puntaje;
     private javax.swing.JButton Salir;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JSlider jSlider1;
-    private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
 }

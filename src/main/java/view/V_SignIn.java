@@ -4,6 +4,8 @@
  */
 package view;
 
+import java.awt.Color;
+
 /**
  *
  * @author Juan
@@ -30,7 +32,7 @@ public class V_SignIn extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         HeaderLogin = new javax.swing.JPanel();
         NombreApp = new javax.swing.JLabel();
-        RegistarseBtn = new javax.swing.JButton();
+        RegistrarseBtn = new javax.swing.JButton();
         Background = new javax.swing.JPanel();
         FormDatosReg = new javax.swing.JPanel();
         NombreField = new javax.swing.JTextField();
@@ -58,15 +60,19 @@ public class V_SignIn extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         HeaderLogin.setBackground(new java.awt.Color(204, 255, 255));
+        HeaderLogin.setName("Entrar"); // NOI18N
 
         NombreApp.setFont(new java.awt.Font("Script MT Bold", 1, 24)); // NOI18N
         NombreApp.setText("123 Viajes C.A");
 
-        RegistarseBtn.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
-        RegistarseBtn.setText("Entrar");
-        RegistarseBtn.addActionListener(new java.awt.event.ActionListener() {
+        RegistrarseBtn.setBackground(new java.awt.Color(204, 255, 255));
+        RegistrarseBtn.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        RegistrarseBtn.setText("Entrar");
+        RegistrarseBtn.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 255, 255)));
+        RegistrarseBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        RegistrarseBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegistarseBtnActionPerformed(evt);
+                RegistrarseBtnActionPerformed(evt);
             }
         });
 
@@ -77,15 +83,15 @@ public class V_SignIn extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderLoginLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(NombreApp, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 398, Short.MAX_VALUE)
-                .addComponent(RegistarseBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 387, Short.MAX_VALUE)
+                .addComponent(RegistrarseBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
         HeaderLoginLayout.setVerticalGroup(
             HeaderLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(NombreApp, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
-                .addComponent(RegistarseBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(RegistrarseBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         getContentPane().add(HeaderLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, -1));
@@ -102,8 +108,8 @@ public class V_SignIn extends javax.swing.JFrame {
         });
         Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        FormDatosReg.setBackground(new java.awt.Color(153, 204, 255));
-        FormDatosReg.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        FormDatosReg.setBackground(new java.awt.Color(204, 255, 255));
+        FormDatosReg.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 255, 255)));
 
         NombreField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,6 +155,7 @@ public class V_SignIn extends javax.swing.JFrame {
         ContrasenaLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         ContrasenaLabel.setText("Contraseña");
 
+        SummitBtn.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         SummitBtn.setText("Ok");
         SummitBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         SummitBtn.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -172,7 +179,7 @@ public class V_SignIn extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FormDatosRegLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(FormDatosRegLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ContrasenaLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ContrasenaLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
                     .addComponent(NombreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(ApellidoLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(EmailLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -185,10 +192,10 @@ public class V_SignIn extends javax.swing.JFrame {
                     .addComponent(NombreField, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ContrasenaField))
                 .addGap(14, 14, 14))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FormDatosRegLayout.createSequentialGroup()
-                .addContainerGap(93, Short.MAX_VALUE)
+            .addGroup(FormDatosRegLayout.createSequentialGroup()
+                .addGap(73, 73, 73)
                 .addComponent(SummitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(69, 69, 69))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         FormDatosRegLayout.setVerticalGroup(
             FormDatosRegLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -218,34 +225,48 @@ public class V_SignIn extends javax.swing.JFrame {
                 .addGap(34, 34, 34))
         );
 
-        Background.add(FormDatosReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 280, 210));
+        Background.add(FormDatosReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 280, 210));
 
         IngresarDatosLabel.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        IngresarDatosLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         IngresarDatosLabel.setText("Ingresa tus datos");
-        Background.add(IngresarDatosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, -1, -1));
+        IngresarDatosLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        IngresarDatosLabel.setMaximumSize(new java.awt.Dimension(140, 22));
+        IngresarDatosLabel.setMinimumSize(new java.awt.Dimension(140, 22));
+        IngresarDatosLabel.setPreferredSize(new java.awt.Dimension(140, 22));
+        Background.add(IngresarDatosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 100, -1, -1));
 
+        InicioGmail.setBackground(new java.awt.Color(204, 255, 255));
+        InicioGmail.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         InicioGmail.setText("Iniciar con gmail");
+        InicioGmail.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 255, 255)));
         InicioGmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 InicioGmailActionPerformed(evt);
             }
         });
-        Background.add(InicioGmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 350, 150, -1));
+        Background.add(InicioGmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 347, 150, 20));
 
+        InicioFacebook.setBackground(new java.awt.Color(204, 255, 255));
+        InicioFacebook.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         InicioFacebook.setText("Iniciar con facebook");
-        Background.add(InicioFacebook, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 370, 150, -1));
+        InicioFacebook.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 1, 1, new java.awt.Color(0, 255, 255)));
+        Background.add(InicioFacebook, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 367, 150, 20));
 
+        InicioTwitter.setBackground(new java.awt.Color(204, 255, 255));
+        InicioTwitter.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         InicioTwitter.setText("Iniciar con twitter");
-        Background.add(InicioTwitter, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 150, -1));
+        InicioTwitter.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 1, 1, new java.awt.Color(0, 255, 255)));
+        Background.add(InicioTwitter, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 387, 150, 20));
 
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void RegistarseBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistarseBtnActionPerformed
+    private void RegistrarseBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarseBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_RegistarseBtnActionPerformed
+    }//GEN-LAST:event_RegistrarseBtnActionPerformed
 
     private void NombreFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreFieldActionPerformed
         // TODO add your handling code here:
@@ -302,7 +323,7 @@ public class V_SignIn extends javax.swing.JFrame {
     private javax.swing.JLabel NombreApp;
     private javax.swing.JTextField NombreField;
     private javax.swing.JLabel NombreLabel;
-    private javax.swing.JButton RegistarseBtn;
+    private javax.swing.JButton RegistrarseBtn;
     private javax.swing.JButton SummitBtn;
     private javax.swing.JTextField TelefonoField;
     private javax.swing.JLabel TelefonoLabel;

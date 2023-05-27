@@ -65,22 +65,25 @@ public class V_Regis_Ciudad extends javax.swing.JFrame {
         NombreApp.setText(" 123 Viajes C.A");
 
         BienvenidoMensage.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        BienvenidoMensage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         BienvenidoMensage.setText("Bienvenido/a");
 
-        Perfil.setBackground(new java.awt.Color(153, 255, 255));
+        Perfil.setBackground(new java.awt.Color(204, 255, 255));
+        Perfil.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Perfil.setMnemonic('3');
         Perfil.setText("Perfil");
-        Perfil.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 0, 255), null));
+        Perfil.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 255, 255)));
         Perfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PerfilActionPerformed(evt);
             }
         });
 
-        Salir.setBackground(new java.awt.Color(153, 255, 255));
+        Salir.setBackground(new java.awt.Color(204, 255, 255));
+        Salir.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Salir.setMnemonic('3');
         Salir.setText("Salir");
-        Salir.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 0, 255), null));
+        Salir.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 255, 255)));
         Salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SalirActionPerformed(evt);
@@ -89,7 +92,7 @@ public class V_Regis_Ciudad extends javax.swing.JFrame {
 
         ProfilePic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ProfilePic.setText("ProfilePic");
-        ProfilePic.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ProfilePic.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 255)));
 
         javax.swing.GroupLayout HeaderLayout = new javax.swing.GroupLayout(Header);
         Header.setLayout(HeaderLayout);
@@ -101,11 +104,11 @@ public class V_Regis_Ciudad extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 302, Short.MAX_VALUE)
                 .addComponent(ProfilePic, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(HeaderLayout.createSequentialGroup()
-                        .addComponent(Perfil)
+                        .addComponent(Perfil, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Salir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(BienvenidoMensage, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(16, 16, 16))
         );
@@ -117,10 +120,10 @@ public class V_Regis_Ciudad extends javax.swing.JFrame {
                 .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(HeaderLayout.createSequentialGroup()
                         .addComponent(BienvenidoMensage, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, Short.MAX_VALUE)
-                        .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Perfil)
-                            .addComponent(Salir)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Salir, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                            .addComponent(Perfil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(ProfilePic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -129,8 +132,10 @@ public class V_Regis_Ciudad extends javax.swing.JFrame {
 
         Background.setPreferredSize(new java.awt.Dimension(720, 480));
 
+        ModCiudadLabel.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         ModCiudadLabel.setText("Añadir Ciudad");
 
+        RegresarBtn.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         RegresarBtn.setText("Regresar");
         RegresarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,19 +143,31 @@ public class V_Regis_Ciudad extends javax.swing.JFrame {
             }
         });
 
-        CiudadInfoBox.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        CiudadInfoBox.setBackground(new java.awt.Color(204, 255, 255));
+        CiudadInfoBox.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
 
+        NombreLabel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         NombreLabel.setText("Nombre");
 
+        RankingLabel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         RankingLabel.setText("Ranking");
 
+        HotelesLabel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         HotelesLabel.setText("Hoteles");
 
+        OpinionesLabel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         OpinionesLabel.setText("Opiniones");
 
+        ZonaLabel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         ZonaLabel.setText("Zona");
 
+        CambiarBtn.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         CambiarBtn.setText("Cambiar");
+        CambiarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CambiarBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout CiudadInfoBoxLayout = new javax.swing.GroupLayout(CiudadInfoBox);
         CiudadInfoBox.setLayout(CiudadInfoBoxLayout);
@@ -164,24 +181,24 @@ public class V_Regis_Ciudad extends javax.swing.JFrame {
                     .addComponent(RankingLabel)
                     .addComponent(NombreLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(ZonaLabel))
-                .addGap(36, 36, 36)
-                .addGroup(CiudadInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(OpinionesField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(HotelesField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RankingField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(NombreField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ZonaField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(CiudadInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(NombreField, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                    .addComponent(RankingField)
+                    .addComponent(HotelesField)
+                    .addComponent(OpinionesField)
+                    .addComponent(ZonaField))
+                .addContainerGap())
             .addGroup(CiudadInfoBoxLayout.createSequentialGroup()
                 .addGap(61, 61, 61)
-                .addComponent(CambiarBtn)
+                .addComponent(CambiarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         CiudadInfoBoxLayout.setVerticalGroup(
             CiudadInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CiudadInfoBoxLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(CiudadInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(12, 12, 12)
+                .addGroup(CiudadInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(NombreField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(NombreLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -200,35 +217,35 @@ public class V_Regis_Ciudad extends javax.swing.JFrame {
                 .addGroup(CiudadInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ZonaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ZonaLabel))
-                .addGap(26, 26, 26)
-                .addComponent(CambiarBtn)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(CambiarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
+        AdjuntarImgLabel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         AdjuntarImgLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         AdjuntarImgLabel.setText("Adjuntar imagen");
 
+        CiudadImage.setBackground(new java.awt.Color(255, 255, 255));
+        CiudadImage.setForeground(new java.awt.Color(153, 153, 153));
         CiudadImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         CiudadImage.setText("CiudadImage");
-        CiudadImage.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        CiudadImage.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 255, 255), 2), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
 
         javax.swing.GroupLayout BackgroundLayout = new javax.swing.GroupLayout(Background);
         Background.setLayout(BackgroundLayout);
         BackgroundLayout.setHorizontalGroup(
             BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BackgroundLayout.createSequentialGroup()
-                .addContainerGap(170, Short.MAX_VALUE)
+                .addContainerGap(113, Short.MAX_VALUE)
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
-                        .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(BackgroundLayout.createSequentialGroup()
-                                .addComponent(AdjuntarImgLabel)
-                                .addGap(115, 115, 115))
-                            .addGroup(BackgroundLayout.createSequentialGroup()
-                                .addComponent(CiudadImage, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(100, 100, 100)))
+                        .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(CiudadImage, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
+                            .addComponent(AdjuntarImgLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(73, 73, 73)
                         .addComponent(CiudadInfoBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(122, 122, 122))
+                        .addGap(149, 149, 149))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
                         .addComponent(ModCiudadLabel)
                         .addGap(304, 304, 304))
@@ -241,25 +258,26 @@ public class V_Regis_Ciudad extends javax.swing.JFrame {
             .addGroup(BackgroundLayout.createSequentialGroup()
                 .addGap(106, 106, 106)
                 .addComponent(ModCiudadLabel)
-                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(18, 18, 18)
+                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(CiudadInfoBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(BackgroundLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(CiudadInfoBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
-                        .addComponent(RegresarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(48, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(CiudadImage, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CiudadImage, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(AdjuntarImgLabel)
-                        .addGap(159, 159, 159))))
+                        .addComponent(AdjuntarImgLabel)))
+                .addGap(32, 32, 32)
+                .addComponent(RegresarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void RegresarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RegresarBtnActionPerformed
 
     private void PerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PerfilActionPerformed
         // TODO add your handling code here:
@@ -269,9 +287,9 @@ public class V_Regis_Ciudad extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_SalirActionPerformed
 
-    private void RegresarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarBtnActionPerformed
+    private void CambiarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CambiarBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_RegresarBtnActionPerformed
+    }//GEN-LAST:event_CambiarBtnActionPerformed
 
     /**
      * @param args the command line arguments

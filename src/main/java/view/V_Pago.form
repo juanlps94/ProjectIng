@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="TipoDePagoBtnG">
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" value="123 Viajes C.A."/>
@@ -57,14 +61,14 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Component id="NombreApp" min="-2" pref="230" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="302" max="32767" attributes="0"/>
                   <Component id="ProfilePic" min="-2" pref="62" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="Perfil" min="-2" max="-2" attributes="0"/>
+                          <Component id="Perfil" min="-2" pref="38" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Salir" min="-2" pref="51" max="-2" attributes="0"/>
+                          <Component id="Salir" max="32767" attributes="0"/>
                       </Group>
                       <Component id="BienvenidoMensage" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
                   </Group>
@@ -80,10 +84,10 @@
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="BienvenidoMensage" min="-2" pref="29" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="Perfil" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Salir" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="Salir" alignment="0" pref="26" max="32767" attributes="0"/>
+                              <Component id="Perfil" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Component id="ProfilePic" alignment="1" max="32767" attributes="0"/>
@@ -107,21 +111,25 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Roboto" size="12" style="0"/>
             </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="Bienvenido/a"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="Perfil">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="99" type="rgb"/>
+              <Color blue="ff" green="ff" red="cc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Roboto" size="12" style="0"/>
             </Property>
             <Property name="mnemonic" type="int" value="51"/>
             <Property name="text" type="java.lang.String" value="Perfil"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
-                <BevelBorder>
-                  <Color PropertyName="highlightOuter" blue="ff" green="0" red="cc" type="rgb"/>
-                </BevelBorder>
+              <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                <MatteColorBorder>
+                  <Color PropertyName="color" blue="ff" green="ff" red="0" type="rgb"/>
+                </MatteColorBorder>
               </Border>
             </Property>
           </Properties>
@@ -132,15 +140,18 @@
         <Component class="javax.swing.JButton" name="Salir">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="99" type="rgb"/>
+              <Color blue="ff" green="ff" red="cc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Roboto" size="12" style="0"/>
             </Property>
             <Property name="mnemonic" type="int" value="51"/>
             <Property name="text" type="java.lang.String" value="Salir"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
-                <BevelBorder>
-                  <Color PropertyName="highlightOuter" blue="ff" green="0" red="cc" type="rgb"/>
-                </BevelBorder>
+              <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                <MatteColorBorder>
+                  <Color PropertyName="color" blue="ff" green="ff" red="0" type="rgb"/>
+                </MatteColorBorder>
               </Border>
             </Property>
           </Properties>
@@ -154,7 +165,9 @@
             <Property name="text" type="java.lang.String" value="ProfilePic"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                <LineBorder/>
+                <LineBorder>
+                  <Color PropertyName="color" blue="ff" green="ff" red="0" type="rgb"/>
+                </LineBorder>
               </Border>
             </Property>
           </Properties>
@@ -394,6 +407,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton1">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="TipoDePagoBtnG"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Visa"/>
               </Properties>
               <Events>
@@ -402,6 +418,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton2">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="TipoDePagoBtnG"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="MasterCard"/>
               </Properties>
               <Events>

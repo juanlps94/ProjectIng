@@ -37,8 +37,8 @@ public class V_Login extends javax.swing.JFrame {
         UserLabel = new javax.swing.JLabel();
         PasswordLabel = new javax.swing.JLabel();
         UserInput = new javax.swing.JTextField();
-        PasswordInput = new javax.swing.JTextField();
         OkBtn = new javax.swing.JButton();
+        jPasswordField1 = new javax.swing.JPasswordField();
         CredencialesLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -96,15 +96,14 @@ public class V_Login extends javax.swing.JFrame {
 
         PasswordLabel.setText("Contraseña");
 
+        UserInput.setFont(new java.awt.Font("Roboto", 2, 12)); // NOI18N
+        UserInput.setForeground(new java.awt.Color(102, 102, 102));
+        UserInput.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        UserInput.setText("alguien@site.com");
+        UserInput.setActionCommand("<Not Set>");
         UserInput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 UserInputActionPerformed(evt);
-            }
-        });
-
-        PasswordInput.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PasswordInputActionPerformed(evt);
             }
         });
 
@@ -114,6 +113,10 @@ public class V_Login extends javax.swing.JFrame {
                 OkBtnActionPerformed(evt);
             }
         });
+
+        jPasswordField1.setFont(new java.awt.Font("Roboto", 2, 12)); // NOI18N
+        jPasswordField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jPasswordField1.setText("Password");
 
         javax.swing.GroupLayout BoxBackgroundLayout = new javax.swing.GroupLayout(BoxBackground);
         BoxBackground.setLayout(BoxBackgroundLayout);
@@ -125,11 +128,10 @@ public class V_Login extends javax.swing.JFrame {
                     .addComponent(PasswordLabel)
                     .addComponent(UserLabel))
                 .addGap(18, 18, 18)
-                .addGroup(BoxBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BoxBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(PasswordInput, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
-                        .addComponent(UserInput))
-                    .addComponent(OkBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(BoxBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(UserInput, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
+                    .addComponent(OkBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPasswordField1))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
         BoxBackgroundLayout.setVerticalGroup(
@@ -142,13 +144,13 @@ public class V_Login extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(BoxBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PasswordLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
-                    .addComponent(PasswordInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(OkBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17))
         );
 
-        CredencialesLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        CredencialesLabel.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
         CredencialesLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         CredencialesLabel.setText("Ingresa tus credenciales");
         CredencialesLabel.setToolTipText("Credenciales");
@@ -174,17 +176,13 @@ public class V_Login extends javax.swing.JFrame {
                 .addComponent(CredencialesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BoxBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(156, Short.MAX_VALUE))
+                .addContainerGap(157, Short.MAX_VALUE))
         );
 
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(-36, 46, 1050, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void PasswordInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordInputActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PasswordInputActionPerformed
 
     private void UserInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserInputActionPerformed
         // TODO add your handling code here:
@@ -212,10 +210,10 @@ public class V_Login extends javax.swing.JFrame {
     private javax.swing.JPanel HeaderLogin;
     private javax.swing.JLabel NombreApp;
     private javax.swing.JButton OkBtn;
-    private javax.swing.JTextField PasswordInput;
     private javax.swing.JLabel PasswordLabel;
     private javax.swing.JButton RegistrarseBtn;
     private javax.swing.JTextField UserInput;
     private javax.swing.JLabel UserLabel;
+    private javax.swing.JPasswordField jPasswordField1;
     // End of variables declaration//GEN-END:variables
 }

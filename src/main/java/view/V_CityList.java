@@ -74,25 +74,28 @@ public class V_CityList extends javax.swing.JFrame {
         Header.setPreferredSize(new java.awt.Dimension(720, 80));
 
         NombreApp.setFont(new java.awt.Font("Script MT Bold", 1, 24)); // NOI18N
-        NombreApp.setText("123 Viajes C.A");
+        NombreApp.setText(" 123 Viajes C.A");
 
         BienvenidoMensage.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        BienvenidoMensage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         BienvenidoMensage.setText("Bienvenido/a");
 
-        Perfil.setBackground(new java.awt.Color(153, 255, 255));
+        Perfil.setBackground(new java.awt.Color(204, 255, 255));
+        Perfil.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Perfil.setMnemonic('3');
         Perfil.setText("Perfil");
-        Perfil.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 0, 255), null));
+        Perfil.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 255, 255)));
         Perfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PerfilActionPerformed(evt);
             }
         });
 
-        Salir.setBackground(new java.awt.Color(153, 255, 255));
+        Salir.setBackground(new java.awt.Color(204, 255, 255));
+        Salir.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Salir.setMnemonic('3');
         Salir.setText("Salir");
-        Salir.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 0, 255), null));
+        Salir.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 255, 255)));
         Salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SalirActionPerformed(evt);
@@ -101,23 +104,23 @@ public class V_CityList extends javax.swing.JFrame {
 
         ProfilePic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ProfilePic.setText("ProfilePic");
-        ProfilePic.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ProfilePic.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 255)));
 
         javax.swing.GroupLayout HeaderLayout = new javax.swing.GroupLayout(Header);
         Header.setLayout(HeaderLayout);
         HeaderLayout.setHorizontalGroup(
             HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addComponent(NombreApp, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 302, Short.MAX_VALUE)
                 .addComponent(ProfilePic, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(HeaderLayout.createSequentialGroup()
-                        .addComponent(Perfil)
+                        .addComponent(Perfil, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Salir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(BienvenidoMensage, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(16, 16, 16))
         );
@@ -129,10 +132,10 @@ public class V_CityList extends javax.swing.JFrame {
                 .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(HeaderLayout.createSequentialGroup()
                         .addComponent(BienvenidoMensage, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, Short.MAX_VALUE)
-                        .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Perfil)
-                            .addComponent(Salir)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Salir, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                            .addComponent(Perfil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(ProfilePic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -166,7 +169,7 @@ public class V_CityList extends javax.swing.JFrame {
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         jPanel2.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel2.setLayout(new java.awt.GridLayout());
+        jPanel2.setLayout(new java.awt.GridLayout(1, 0));
 
         CityInfoBox.setBackground(new java.awt.Color(204, 204, 204));
         CityInfoBox.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -430,14 +433,6 @@ public class V_CityList extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void PerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PerfilActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PerfilActionPerformed
-
-    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SalirActionPerformed
-
     private void BuscadorCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscadorCiudadActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BuscadorCiudadActionPerformed
@@ -477,6 +472,14 @@ public class V_CityList extends javax.swing.JFrame {
     private void InfoCiudad3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfoCiudad3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_InfoCiudad3ActionPerformed
+
+    private void PerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PerfilActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PerfilActionPerformed
+
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SalirActionPerformed
 
     /**
      * @param args the command line arguments

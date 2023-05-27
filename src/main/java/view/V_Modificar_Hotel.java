@@ -130,6 +130,7 @@ public class V_Modificar_Hotel extends javax.swing.JFrame {
 
         Background.setPreferredSize(new java.awt.Dimension(720, 480));
 
+        ModCiudadLabel.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
         ModCiudadLabel.setText("Modificar Hotel");
 
         RegresarBtn.setText("Regresar");
@@ -139,7 +140,8 @@ public class V_Modificar_Hotel extends javax.swing.JFrame {
             }
         });
 
-        HotelInfoBox.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        HotelInfoBox.setBackground(new java.awt.Color(204, 255, 255));
+        HotelInfoBox.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
 
         NombreLabel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         NombreLabel.setText("Nombre");
@@ -214,52 +216,53 @@ public class V_Modificar_Hotel extends javax.swing.JFrame {
         AdjuntarImgLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         AdjuntarImgLabel.setText("Adjuntar imagen");
 
+        HotelImageLabel.setBackground(new java.awt.Color(255, 255, 255));
+        HotelImageLabel.setForeground(new java.awt.Color(102, 102, 102));
         HotelImageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         HotelImageLabel.setText("HotelImage");
-        HotelImageLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        HotelImageLabel.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 2, true), new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true)));
 
         javax.swing.GroupLayout BackgroundLayout = new javax.swing.GroupLayout(Background);
         Background.setLayout(BackgroundLayout);
         BackgroundLayout.setHorizontalGroup(
             BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BackgroundLayout.createSequentialGroup()
-                .addContainerGap(152, Short.MAX_VALUE)
+                .addContainerGap(249, Short.MAX_VALUE)
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
-                        .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(BackgroundLayout.createSequentialGroup()
-                                .addComponent(AdjuntarImgLabel)
-                                .addGap(115, 115, 115))
-                            .addGroup(BackgroundLayout.createSequentialGroup()
-                                .addComponent(HotelImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(100, 100, 100)))
-                        .addComponent(HotelInfoBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(122, 122, 122))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
                         .addComponent(ModCiudadLabel)
                         .addGap(304, 304, 304))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
                         .addComponent(RegresarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(40, 40, 40))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
+                .addGap(116, 116, 116)
+                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(BackgroundLayout.createSequentialGroup()
+                        .addComponent(AdjuntarImgLabel)
+                        .addGap(15, 15, 15))
+                    .addComponent(HotelImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(HotelInfoBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(122, 122, 122))
         );
         BackgroundLayout.setVerticalGroup(
             BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BackgroundLayout.createSequentialGroup()
                 .addGap(106, 106, 106)
                 .addComponent(ModCiudadLabel)
+                .addGap(18, 18, 18)
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BackgroundLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
                         .addComponent(HotelInfoBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
-                        .addComponent(RegresarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(48, Short.MAX_VALUE))
+                        .addGap(32, 32, 32))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(HotelImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(AdjuntarImgLabel)
-                        .addGap(159, 159, 159))))
+                        .addGap(74, 74, 74)))
+                .addComponent(RegresarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
