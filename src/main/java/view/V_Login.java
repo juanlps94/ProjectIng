@@ -192,12 +192,16 @@ public class V_Login extends javax.swing.JFrame {
 
     private void OkBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OkBtnActionPerformed
         // TODO add your handling code here:
+        String email = this.UserInput.getText();
+        String pass = this.jPasswordField1.getText();
         this.setVisible(false);
         this.vistaCityList.setVisible(true);
     }//GEN-LAST:event_OkBtnActionPerformed
 
     private void RegistrarseBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarseBtnActionPerformed
         // TODO add your handling code here:
+        this.vistaSignIn.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_RegistrarseBtnActionPerformed
 
     /**
