@@ -114,10 +114,8 @@ public class V_Inicio extends javax.swing.JFrame {
         Background.setBackground(new java.awt.Color(255, 255, 255));
         Background.setForeground(new java.awt.Color(255, 255, 255));
 
-        Img_palafitos.setIcon(new javax.swing.ImageIcon("C:\\Users\\usuario\\Documents\\NetBeansProjects\\ProjectIng\\src\\main\\java\\Images\\hotel1.jpeg")); // NOI18N
         Img_palafitos.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        Img_piscina.setIcon(new javax.swing.ImageIcon("C:\\Users\\usuario\\Documents\\NetBeansProjects\\ProjectIng\\src\\main\\java\\Images\\hotel2.jpeg")); // NOI18N
         Img_piscina.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         ReservarBtn.setBackground(new java.awt.Color(153, 255, 255));
@@ -216,15 +214,20 @@ public class V_Inicio extends javax.swing.JFrame {
 
     private void EntrarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntrarBtnActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        this.vistaCityList.setVisible(true);
     }//GEN-LAST:event_EntrarBtnActionPerformed
 
     private void ReservarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReservarBtnActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        this.vistaSignIn.setVisible(true);
     }//GEN-LAST:event_ReservarBtnActionPerformed
 
     private void RegistrarseBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarseBtnActionPerformed
         // TODO add your handling code here:
-        
+        this.setVisible(false);
+        this.vistaSignIn.setVisible(true);
     }//GEN-LAST:event_RegistrarseBtnActionPerformed
 
     /**
