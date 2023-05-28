@@ -4,6 +4,8 @@
  */
 package view;
 
+import java.awt.Color;
+
 /**
  *
  * @author usuario
@@ -12,6 +14,7 @@ public class V_CityList extends javax.swing.JFrame {
     V_Perfil_Modificar vistaModPerfil;
     V_Inicio vistaInicio;
     V_HotelList vistaHoteles;
+    V_Pago vistaPago;
     /**
      * Creates new form V_CityList
      */
@@ -54,7 +57,7 @@ public class V_CityList extends javax.swing.JFrame {
         NombreCiudadTP2 = new javax.swing.JTextPane();
         jScrollPane6 = new javax.swing.JScrollPane();
         DescripcionCiudad = new javax.swing.JTextPane();
-        ModificarBtn1 = new javax.swing.JButton();
+        ReservarBtn1 = new javax.swing.JButton();
         Ciudad_InfoBox2 = new javax.swing.JPanel();
         Ciudad_Pic2 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
@@ -65,7 +68,7 @@ public class V_CityList extends javax.swing.JFrame {
         NombreCiudadTP3 = new javax.swing.JTextPane();
         jScrollPane10 = new javax.swing.JScrollPane();
         DescripcionCiudad1 = new javax.swing.JTextPane();
-        ModificarBtn2 = new javax.swing.JButton();
+        ReservarBtn2 = new javax.swing.JButton();
         Ciudad_InfoBox3 = new javax.swing.JPanel();
         Ciudad_Pic3 = new javax.swing.JLabel();
         jScrollPane11 = new javax.swing.JScrollPane();
@@ -76,7 +79,7 @@ public class V_CityList extends javax.swing.JFrame {
         NombreCiudadTP4 = new javax.swing.JTextPane();
         jScrollPane14 = new javax.swing.JScrollPane();
         DescripcionCiudad2 = new javax.swing.JTextPane();
-        ModificarBtn3 = new javax.swing.JButton();
+        ReservarBtn3 = new javax.swing.JButton();
         Ciudad_InfoBox4 = new javax.swing.JPanel();
         Ciudad_Pic4 = new javax.swing.JLabel();
         jScrollPane15 = new javax.swing.JScrollPane();
@@ -87,7 +90,7 @@ public class V_CityList extends javax.swing.JFrame {
         NombreCiudadTP5 = new javax.swing.JTextPane();
         jScrollPane18 = new javax.swing.JScrollPane();
         DescripcionCiudad3 = new javax.swing.JTextPane();
-        ModificarBtn4 = new javax.swing.JButton();
+        ReservarBtn4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("123 Viajes C.A.");
@@ -179,9 +182,9 @@ public class V_CityList extends javax.swing.JFrame {
         BuscadorCiudad.setForeground(new java.awt.Color(102, 102, 102));
         BuscadorCiudad.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         BuscadorCiudad.setText("Ciudad");
-        BuscadorCiudad.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BuscadorCiudadActionPerformed(evt);
+        BuscadorCiudad.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                BuscadorCiudadMousePressed(evt);
             }
         });
 
@@ -257,15 +260,20 @@ public class V_CityList extends javax.swing.JFrame {
 
         Ciudad_InfoBox1.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 440, 94));
 
-        ModificarBtn1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        ModificarBtn1.setText("Reservar");
-        ModificarBtn1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        ModificarBtn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarBtn1ActionPerformed(evt);
+        ReservarBtn1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        ReservarBtn1.setText("Reservar");
+        ReservarBtn1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        ReservarBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ReservarBtn1MouseClicked(evt);
             }
         });
-        Ciudad_InfoBox1.add(ModificarBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 75, 50));
+        ReservarBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReservarBtn1ActionPerformed(evt);
+            }
+        });
+        Ciudad_InfoBox1.add(ReservarBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 75, 50));
 
         Ciudad_InfoBox2.setBackground(new java.awt.Color(204, 255, 255));
         Ciudad_InfoBox2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
@@ -315,15 +323,20 @@ public class V_CityList extends javax.swing.JFrame {
 
         Ciudad_InfoBox2.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 440, 94));
 
-        ModificarBtn2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        ModificarBtn2.setText("Reservar");
-        ModificarBtn2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        ModificarBtn2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarBtn2ActionPerformed(evt);
+        ReservarBtn2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        ReservarBtn2.setText("Reservar");
+        ReservarBtn2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        ReservarBtn2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ReservarBtn1MouseClicked(evt);
             }
         });
-        Ciudad_InfoBox2.add(ModificarBtn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 75, 50));
+        ReservarBtn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReservarBtn2ActionPerformed(evt);
+            }
+        });
+        Ciudad_InfoBox2.add(ReservarBtn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 75, 50));
 
         Ciudad_InfoBox3.setBackground(new java.awt.Color(204, 255, 255));
         Ciudad_InfoBox3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
@@ -373,15 +386,20 @@ public class V_CityList extends javax.swing.JFrame {
 
         Ciudad_InfoBox3.add(jScrollPane14, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 440, 94));
 
-        ModificarBtn3.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        ModificarBtn3.setText("Reservar");
-        ModificarBtn3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        ModificarBtn3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarBtn3ActionPerformed(evt);
+        ReservarBtn3.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        ReservarBtn3.setText("Reservar");
+        ReservarBtn3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        ReservarBtn3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ReservarBtn1MouseClicked(evt);
             }
         });
-        Ciudad_InfoBox3.add(ModificarBtn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 75, 50));
+        ReservarBtn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReservarBtn3ActionPerformed(evt);
+            }
+        });
+        Ciudad_InfoBox3.add(ReservarBtn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 75, 50));
 
         Ciudad_InfoBox4.setBackground(new java.awt.Color(204, 255, 255));
         Ciudad_InfoBox4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
@@ -431,15 +449,20 @@ public class V_CityList extends javax.swing.JFrame {
 
         Ciudad_InfoBox4.add(jScrollPane18, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 440, 94));
 
-        ModificarBtn4.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        ModificarBtn4.setText("Reservar");
-        ModificarBtn4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        ModificarBtn4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarBtn4ActionPerformed(evt);
+        ReservarBtn4.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        ReservarBtn4.setText("Reservar");
+        ReservarBtn4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        ReservarBtn4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ReservarBtn1MouseClicked(evt);
             }
         });
-        Ciudad_InfoBox4.add(ModificarBtn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 75, 50));
+        ReservarBtn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReservarBtn4ActionPerformed(evt);
+            }
+        });
+        Ciudad_InfoBox4.add(ReservarBtn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 75, 50));
 
         javax.swing.GroupLayout ScrollBoxLayout = new javax.swing.GroupLayout(ScrollBox);
         ScrollBox.setLayout(ScrollBoxLayout);
@@ -506,10 +529,6 @@ public class V_CityList extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BuscadorCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscadorCiudadActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BuscadorCiudadActionPerformed
-
     private void BuscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BuscarBtnActionPerformed
@@ -522,21 +541,34 @@ public class V_CityList extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_SalirActionPerformed
 
-    private void ModificarBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarBtn1ActionPerformed
+    private void ReservarBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReservarBtn1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ModificarBtn1ActionPerformed
+    }//GEN-LAST:event_ReservarBtn1ActionPerformed
 
-    private void ModificarBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarBtn2ActionPerformed
+    private void ReservarBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReservarBtn2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ModificarBtn2ActionPerformed
+    }//GEN-LAST:event_ReservarBtn2ActionPerformed
 
-    private void ModificarBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarBtn3ActionPerformed
+    private void ReservarBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReservarBtn3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ModificarBtn3ActionPerformed
+    }//GEN-LAST:event_ReservarBtn3ActionPerformed
 
-    private void ModificarBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarBtn4ActionPerformed
+    private void ReservarBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReservarBtn4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ModificarBtn4ActionPerformed
+    }//GEN-LAST:event_ReservarBtn4ActionPerformed
+
+    private void BuscadorCiudadMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscadorCiudadMousePressed
+        // TODO add your handling code here:
+    BuscadorCiudad.setText("");
+    BuscadorCiudad.setForeground(Color.black);
+    }//GEN-LAST:event_BuscadorCiudadMousePressed
+
+    private void ReservarBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReservarBtn1MouseClicked
+    // TODO add your handling code here:
+    vistaPago = new V_Pago();
+    vistaPago.setVisible(true);
+    this.dispose();
+    }//GEN-LAST:event_ReservarBtn1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -561,10 +593,6 @@ public class V_CityList extends javax.swing.JFrame {
     private javax.swing.JTextPane DescripcionCiudad2;
     private javax.swing.JTextPane DescripcionCiudad3;
     private javax.swing.JPanel Header;
-    private javax.swing.JButton ModificarBtn1;
-    private javax.swing.JButton ModificarBtn2;
-    private javax.swing.JButton ModificarBtn3;
-    private javax.swing.JButton ModificarBtn4;
     private javax.swing.JLabel NombreApp;
     private javax.swing.JTextPane NombreCiudadTP2;
     private javax.swing.JTextPane NombreCiudadTP3;
@@ -576,6 +604,10 @@ public class V_CityList extends javax.swing.JFrame {
     private javax.swing.JTextPane Ranking1;
     private javax.swing.JTextPane Ranking2;
     private javax.swing.JTextPane Ranking3;
+    private javax.swing.JButton ReservarBtn1;
+    private javax.swing.JButton ReservarBtn2;
+    private javax.swing.JButton ReservarBtn3;
+    private javax.swing.JButton ReservarBtn4;
     private javax.swing.JButton Salir;
     private javax.swing.JPanel ScrollBox;
     private javax.swing.JPanel Scroll_BGPanel;

@@ -283,11 +283,11 @@ public class V_Pago extends javax.swing.JFrame {
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
-        Background.add(FormPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 89, -1, -1));
+        Background.add(FormPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 90, -1, -1));
 
         ProcederPagoLabel.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         ProcederPagoLabel.setText("Proceda con el pago");
-        Background.add(ProcederPagoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 123, -1, -1));
+        Background.add(ProcederPagoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, -1));
 
         RegresarBtn.setBackground(new java.awt.Color(255, 204, 204));
         RegresarBtn.setText("Regresar");
@@ -296,12 +296,12 @@ public class V_Pago extends javax.swing.JFrame {
                 RegresarBtnActionPerformed(evt);
             }
         });
-        Background.add(RegresarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 115, 29));
+        Background.add(RegresarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 380, 115, 29));
 
         jLabel1.setBackground(new java.awt.Color(204, 255, 255));
         jLabel1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        Background.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 190, 230));
+        Background.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 190, 230));
 
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 480));
 
