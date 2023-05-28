@@ -67,7 +67,7 @@ public class V_Regis_Hotel extends javax.swing.JFrame {
         BienvenidoMensage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         BienvenidoMensage.setText("Bienvenido/a");
 
-        Perfil.setBackground(new java.awt.Color(204, 255, 255));
+        Perfil.setBackground(new java.awt.Color(153, 255, 255));
         Perfil.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Perfil.setMnemonic('3');
         Perfil.setText("Perfil");
@@ -78,7 +78,7 @@ public class V_Regis_Hotel extends javax.swing.JFrame {
             }
         });
 
-        Salir.setBackground(new java.awt.Color(204, 255, 255));
+        Salir.setBackground(new java.awt.Color(153, 255, 255));
         Salir.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Salir.setMnemonic('3');
         Salir.setText("Salir");
@@ -129,11 +129,15 @@ public class V_Regis_Hotel extends javax.swing.JFrame {
 
         getContentPane().add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        Background.setBackground(new java.awt.Color(255, 255, 255));
         Background.setPreferredSize(new java.awt.Dimension(720, 480));
 
         ModCiudadLabel.setText("Modificar Hotel");
 
+        RegresarBtn.setBackground(new java.awt.Color(204, 255, 255));
+        RegresarBtn.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         RegresarBtn.setText("Regresar");
+        RegresarBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
         RegresarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RegresarBtnActionPerformed(evt);
@@ -144,18 +148,23 @@ public class V_Regis_Hotel extends javax.swing.JFrame {
         HotelInfoBox.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
 
         NombreLabel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        NombreLabel.setLabelFor(NombreField);
         NombreLabel.setText("Nombre");
 
         RankingLabel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        RankingLabel.setLabelFor(RankingField);
         RankingLabel.setText("Ranking");
 
         HabitacionesLabel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        HabitacionesLabel.setLabelFor(HabitacionesField);
         HabitacionesLabel.setText("Habitaciones");
 
         OpinionesLabel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        OpinionesLabel.setLabelFor(OpinionesField);
         OpinionesLabel.setText("Opiniones");
 
         ZonaLabel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        ZonaLabel.setLabelFor(ZonaField);
         ZonaLabel.setText("Zona");
 
         CambiarBtn.setText("Cambiar");
@@ -215,6 +224,7 @@ public class V_Regis_Hotel extends javax.swing.JFrame {
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
+        AdjuntarImgLabel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         AdjuntarImgLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         AdjuntarImgLabel.setText("Adjuntar imagen");
 

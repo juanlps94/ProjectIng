@@ -8,7 +8,7 @@ package view;
  *
  * @author usuario
  */
-public class V_HotelList extends javax.swing.JFrame {
+public class V_HotelList_Admin extends javax.swing.JFrame {
 
     V_Perfil_Modificar vistaModPerfil;
     V_Inicio vistaInicial;
@@ -16,7 +16,7 @@ public class V_HotelList extends javax.swing.JFrame {
     /**
      * Creates new form V_HotelList
      */
-    public V_HotelList(V_Inicio vistaInicial, V_Perfil_Modificar vistaModPerfil) {
+    public V_HotelList_Admin(V_Inicio vistaInicial, V_Perfil_Modificar vistaModPerfil) {
         initComponents();
         this.vistaModPerfil = vistaModPerfil;
         this.vistaInicial = vistaInicial;
@@ -44,7 +44,20 @@ public class V_HotelList extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         Scroll_BGPanel = new javax.swing.JPanel();
         ScrollBox = new javax.swing.JPanel();
+        Hotel_InfoBox3 = new javax.swing.JPanel();
+        EliminarBtn3 = new javax.swing.JButton();
+        ModificarBtn3 = new javax.swing.JButton();
+        Hotel_Pic3 = new javax.swing.JLabel();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        EmailHotelTP2 = new javax.swing.JTextPane();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        TelefonoHotelTP2 = new javax.swing.JTextPane();
+        jScrollPane13 = new javax.swing.JScrollPane();
+        NombreHotelTP4 = new javax.swing.JTextPane();
+        jScrollPane14 = new javax.swing.JScrollPane();
+        jTextPane4 = new javax.swing.JTextPane();
         Hotel_InfoBox1 = new javax.swing.JPanel();
+        EliminarBtn1 = new javax.swing.JButton();
         ModificarBtn1 = new javax.swing.JButton();
         Hotel_Pic1 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -56,6 +69,7 @@ public class V_HotelList extends javax.swing.JFrame {
         jScrollPane6 = new javax.swing.JScrollPane();
         jTextPane2 = new javax.swing.JTextPane();
         Hotel_InfoBox2 = new javax.swing.JPanel();
+        EliminarBtn2 = new javax.swing.JButton();
         ModificarBtn2 = new javax.swing.JButton();
         Hotel_Pic2 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
@@ -66,32 +80,9 @@ public class V_HotelList extends javax.swing.JFrame {
         NombreHotelTP3 = new javax.swing.JTextPane();
         jScrollPane10 = new javax.swing.JScrollPane();
         jTextPane3 = new javax.swing.JTextPane();
-        Hotel_InfoBox3 = new javax.swing.JPanel();
-        ModificarBtn3 = new javax.swing.JButton();
-        Hotel_Pic3 = new javax.swing.JLabel();
-        jScrollPane11 = new javax.swing.JScrollPane();
-        EmailHotelTP2 = new javax.swing.JTextPane();
-        jScrollPane12 = new javax.swing.JScrollPane();
-        TelefonoHotelTP2 = new javax.swing.JTextPane();
-        jScrollPane13 = new javax.swing.JScrollPane();
-        NombreHotelTP4 = new javax.swing.JTextPane();
-        jScrollPane14 = new javax.swing.JScrollPane();
-        jTextPane4 = new javax.swing.JTextPane();
-        Hotel_InfoBox4 = new javax.swing.JPanel();
-        ModificarBtn4 = new javax.swing.JButton();
-        Hotel_Pic4 = new javax.swing.JLabel();
-        jScrollPane15 = new javax.swing.JScrollPane();
-        EmailHotelTP3 = new javax.swing.JTextPane();
-        jScrollPane16 = new javax.swing.JScrollPane();
-        TelefonoHotelTP3 = new javax.swing.JTextPane();
-        jScrollPane17 = new javax.swing.JScrollPane();
-        NombreHotelTP5 = new javax.swing.JTextPane();
-        jScrollPane18 = new javax.swing.JScrollPane();
-        jTextPane5 = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("123 Viajes C.A.");
-        setMaximumSize(new java.awt.Dimension(720, 480));
         setMinimumSize(new java.awt.Dimension(720, 480));
         setPreferredSize(new java.awt.Dimension(720, 480));
         setResizable(false);
@@ -167,11 +158,12 @@ public class V_HotelList extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, -1));
 
         Background.setBackground(new java.awt.Color(255, 255, 255));
         Background.setMaximumSize(new java.awt.Dimension(720, 480));
         Background.setMinimumSize(new java.awt.Dimension(720, 480));
+        Background.setPreferredSize(new java.awt.Dimension(720, 480));
 
         BuscadorCiudad.setFont(new java.awt.Font("Roboto", 2, 12)); // NOI18N
         BuscadorCiudad.setForeground(new java.awt.Color(102, 102, 102));
@@ -202,11 +194,78 @@ public class V_HotelList extends javax.swing.JFrame {
         Scroll_BGPanel.setBackground(new java.awt.Color(255, 255, 255));
         Scroll_BGPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
         Scroll_BGPanel.setOpaque(false);
-        Scroll_BGPanel.setLayout(new java.awt.GridLayout());
+        Scroll_BGPanel.setLayout(new java.awt.GridLayout(1, 0));
 
         ScrollBox.setBackground(new java.awt.Color(255, 255, 255));
         ScrollBox.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 1, true));
         ScrollBox.setOpaque(false);
+
+        Hotel_InfoBox3.setBackground(new java.awt.Color(204, 255, 255));
+        Hotel_InfoBox3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        Hotel_InfoBox3.setAutoscrolls(true);
+        Hotel_InfoBox3.setMaximumSize(new java.awt.Dimension(50, 32767));
+        Hotel_InfoBox3.setMinimumSize(new java.awt.Dimension(645, 127));
+        Hotel_InfoBox3.setPreferredSize(new java.awt.Dimension(645, 127));
+        Hotel_InfoBox3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        EliminarBtn3.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        EliminarBtn3.setText("Eliminar");
+        EliminarBtn3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        EliminarBtn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarBtn3ActionPerformed(evt);
+            }
+        });
+        Hotel_InfoBox3.add(EliminarBtn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, 75, 50));
+
+        ModificarBtn3.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        ModificarBtn3.setText("Modificar");
+        ModificarBtn3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        ModificarBtn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModificarBtn3ActionPerformed(evt);
+            }
+        });
+        Hotel_InfoBox3.add(ModificarBtn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 75, 50));
+
+        Hotel_Pic3.setBackground(new java.awt.Color(204, 255, 255));
+        Hotel_Pic3.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        Hotel_Pic3.setForeground(new java.awt.Color(153, 153, 153));
+        Hotel_Pic3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Hotel_Pic3.setText("Pic");
+        Hotel_Pic3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        Hotel_InfoBox3.add(Hotel_Pic3, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 7, 100, 120));
+
+        EmailHotelTP2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        EmailHotelTP2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        EmailHotelTP2.setForeground(new java.awt.Color(153, 153, 153));
+        EmailHotelTP2.setText("hotel@site.com");
+        jScrollPane11.setViewportView(EmailHotelTP2);
+
+        Hotel_InfoBox3.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, 140, -1));
+
+        TelefonoHotelTP2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        TelefonoHotelTP2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        TelefonoHotelTP2.setForeground(new java.awt.Color(153, 153, 153));
+        TelefonoHotelTP2.setText("0412-1234567");
+        jScrollPane12.setViewportView(TelefonoHotelTP2);
+
+        Hotel_InfoBox3.add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(316, 10, 90, -1));
+
+        NombreHotelTP4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        NombreHotelTP4.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        NombreHotelTP4.setText("Nombre");
+        NombreHotelTP4.setPreferredSize(new java.awt.Dimension(20, 17));
+        jScrollPane13.setViewportView(NombreHotelTP4);
+
+        Hotel_InfoBox3.add(jScrollPane13, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 200, -1));
+
+        jTextPane4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        jTextPane4.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        jTextPane4.setText("Descripcion");
+        jScrollPane14.setViewportView(jTextPane4);
+
+        Hotel_InfoBox3.add(jScrollPane14, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 440, 94));
 
         Hotel_InfoBox1.setBackground(new java.awt.Color(204, 255, 255));
         Hotel_InfoBox1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
@@ -216,15 +275,25 @@ public class V_HotelList extends javax.swing.JFrame {
         Hotel_InfoBox1.setPreferredSize(new java.awt.Dimension(645, 134));
         Hotel_InfoBox1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        EliminarBtn1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        EliminarBtn1.setText("Eliminar");
+        EliminarBtn1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        EliminarBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarBtn1ActionPerformed(evt);
+            }
+        });
+        Hotel_InfoBox1.add(EliminarBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, 75, 50));
+
         ModificarBtn1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        ModificarBtn1.setText("Reservar");
+        ModificarBtn1.setText("Modificar");
         ModificarBtn1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
         ModificarBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModificarBtn1ActionPerformed(evt);
             }
         });
-        Hotel_InfoBox1.add(ModificarBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 75, 50));
+        Hotel_InfoBox1.add(ModificarBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 75, 50));
 
         Hotel_Pic1.setBackground(new java.awt.Color(204, 255, 255));
         Hotel_Pic1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
@@ -270,18 +339,28 @@ public class V_HotelList extends javax.swing.JFrame {
         Hotel_InfoBox2.setAutoscrolls(true);
         Hotel_InfoBox2.setMaximumSize(new java.awt.Dimension(50, 32767));
         Hotel_InfoBox2.setMinimumSize(new java.awt.Dimension(645, 127));
-        Hotel_InfoBox2.setPreferredSize(new java.awt.Dimension(645, 134));
+        Hotel_InfoBox2.setPreferredSize(new java.awt.Dimension(645, 127));
         Hotel_InfoBox2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        EliminarBtn2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        EliminarBtn2.setText("Eliminar");
+        EliminarBtn2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        EliminarBtn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarBtn2ActionPerformed(evt);
+            }
+        });
+        Hotel_InfoBox2.add(EliminarBtn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, 75, 50));
+
         ModificarBtn2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        ModificarBtn2.setText("Reservar");
+        ModificarBtn2.setText("Modificar");
         ModificarBtn2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
         ModificarBtn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModificarBtn2ActionPerformed(evt);
             }
         });
-        Hotel_InfoBox2.add(ModificarBtn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 75, 50));
+        Hotel_InfoBox2.add(ModificarBtn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 75, 50));
 
         Hotel_Pic2.setBackground(new java.awt.Color(204, 255, 255));
         Hotel_Pic2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
@@ -322,143 +401,25 @@ public class V_HotelList extends javax.swing.JFrame {
 
         Hotel_InfoBox2.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 440, 94));
 
-        Hotel_InfoBox3.setBackground(new java.awt.Color(204, 255, 255));
-        Hotel_InfoBox3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        Hotel_InfoBox3.setAutoscrolls(true);
-        Hotel_InfoBox3.setMaximumSize(new java.awt.Dimension(50, 32767));
-        Hotel_InfoBox3.setMinimumSize(new java.awt.Dimension(645, 127));
-        Hotel_InfoBox3.setPreferredSize(new java.awt.Dimension(645, 134));
-        Hotel_InfoBox3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        ModificarBtn3.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        ModificarBtn3.setText("Reservar");
-        ModificarBtn3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        ModificarBtn3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarBtn3ActionPerformed(evt);
-            }
-        });
-        Hotel_InfoBox3.add(ModificarBtn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 75, 50));
-
-        Hotel_Pic3.setBackground(new java.awt.Color(204, 255, 255));
-        Hotel_Pic3.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        Hotel_Pic3.setForeground(new java.awt.Color(153, 153, 153));
-        Hotel_Pic3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Hotel_Pic3.setText("Pic");
-        Hotel_Pic3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        Hotel_InfoBox3.add(Hotel_Pic3, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 7, 100, 120));
-
-        EmailHotelTP2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        EmailHotelTP2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        EmailHotelTP2.setForeground(new java.awt.Color(153, 153, 153));
-        EmailHotelTP2.setText("hotel@site.com");
-        jScrollPane11.setViewportView(EmailHotelTP2);
-
-        Hotel_InfoBox3.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, 140, -1));
-
-        TelefonoHotelTP2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        TelefonoHotelTP2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        TelefonoHotelTP2.setForeground(new java.awt.Color(153, 153, 153));
-        TelefonoHotelTP2.setText("0412-1234567");
-        jScrollPane12.setViewportView(TelefonoHotelTP2);
-
-        Hotel_InfoBox3.add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(316, 10, 90, -1));
-
-        NombreHotelTP4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        NombreHotelTP4.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        NombreHotelTP4.setText("Nombre");
-        NombreHotelTP4.setPreferredSize(new java.awt.Dimension(20, 17));
-        jScrollPane13.setViewportView(NombreHotelTP4);
-
-        Hotel_InfoBox3.add(jScrollPane13, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 200, -1));
-
-        jTextPane4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        jTextPane4.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jTextPane4.setText("Descripcion");
-        jScrollPane14.setViewportView(jTextPane4);
-
-        Hotel_InfoBox3.add(jScrollPane14, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 440, 94));
-
-        Hotel_InfoBox4.setBackground(new java.awt.Color(204, 255, 255));
-        Hotel_InfoBox4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        Hotel_InfoBox4.setAutoscrolls(true);
-        Hotel_InfoBox4.setMaximumSize(new java.awt.Dimension(50, 32767));
-        Hotel_InfoBox4.setMinimumSize(new java.awt.Dimension(645, 127));
-        Hotel_InfoBox4.setPreferredSize(new java.awt.Dimension(645, 134));
-        Hotel_InfoBox4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        ModificarBtn4.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        ModificarBtn4.setText("Reservar");
-        ModificarBtn4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        ModificarBtn4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarBtn4ActionPerformed(evt);
-            }
-        });
-        Hotel_InfoBox4.add(ModificarBtn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 75, 50));
-
-        Hotel_Pic4.setBackground(new java.awt.Color(204, 255, 255));
-        Hotel_Pic4.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        Hotel_Pic4.setForeground(new java.awt.Color(153, 153, 153));
-        Hotel_Pic4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Hotel_Pic4.setText("Pic");
-        Hotel_Pic4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        Hotel_InfoBox4.add(Hotel_Pic4, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 7, 100, 120));
-
-        EmailHotelTP3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        EmailHotelTP3.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        EmailHotelTP3.setForeground(new java.awt.Color(153, 153, 153));
-        EmailHotelTP3.setText("hotel@site.com");
-        jScrollPane15.setViewportView(EmailHotelTP3);
-
-        Hotel_InfoBox4.add(jScrollPane15, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, 140, -1));
-
-        TelefonoHotelTP3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        TelefonoHotelTP3.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        TelefonoHotelTP3.setForeground(new java.awt.Color(153, 153, 153));
-        TelefonoHotelTP3.setText("0412-1234567");
-        jScrollPane16.setViewportView(TelefonoHotelTP3);
-
-        Hotel_InfoBox4.add(jScrollPane16, new org.netbeans.lib.awtextra.AbsoluteConstraints(316, 10, 90, -1));
-
-        NombreHotelTP5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        NombreHotelTP5.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        NombreHotelTP5.setText("Nombre");
-        NombreHotelTP5.setPreferredSize(new java.awt.Dimension(20, 17));
-        jScrollPane17.setViewportView(NombreHotelTP5);
-
-        Hotel_InfoBox4.add(jScrollPane17, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 200, -1));
-
-        jTextPane5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        jTextPane5.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jTextPane5.setText("Descripcion");
-        jScrollPane18.setViewportView(jTextPane5);
-
-        Hotel_InfoBox4.add(jScrollPane18, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 440, 94));
-
         javax.swing.GroupLayout ScrollBoxLayout = new javax.swing.GroupLayout(ScrollBox);
         ScrollBox.setLayout(ScrollBoxLayout);
         ScrollBoxLayout.setHorizontalGroup(
             ScrollBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ScrollBoxLayout.createSequentialGroup()
-                .addGroup(ScrollBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Hotel_InfoBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Hotel_InfoBox2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Hotel_InfoBox3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Hotel_InfoBox4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(Hotel_InfoBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(Hotel_InfoBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Hotel_InfoBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         ScrollBoxLayout.setVerticalGroup(
             ScrollBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ScrollBoxLayout.createSequentialGroup()
                 .addComponent(Hotel_InfoBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Hotel_InfoBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Hotel_InfoBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Hotel_InfoBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Hotel_InfoBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 491, Short.MAX_VALUE))
+                .addComponent(Hotel_InfoBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 208, Short.MAX_VALUE))
         );
 
         Scroll_BGPanel.add(ScrollBox);
@@ -489,9 +450,9 @@ public class V_HotelList extends javax.swing.JFrame {
                     .addComponent(BuscadorCiudad)
                     .addComponent(BuscarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
                     .addComponent(CiudadesDisponibles, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(10, 10, 10)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 482));
@@ -515,21 +476,29 @@ public class V_HotelList extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_SalirActionPerformed
 
+    private void EliminarBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EliminarBtn1ActionPerformed
+
     private void ModificarBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarBtn1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ModificarBtn1ActionPerformed
+
+    private void EliminarBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarBtn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EliminarBtn2ActionPerformed
 
     private void ModificarBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarBtn2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ModificarBtn2ActionPerformed
 
+    private void EliminarBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarBtn3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EliminarBtn3ActionPerformed
+
     private void ModificarBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarBtn3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ModificarBtn3ActionPerformed
-
-    private void ModificarBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarBtn4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ModificarBtn4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -541,28 +510,26 @@ public class V_HotelList extends javax.swing.JFrame {
     private javax.swing.JTextField BuscadorCiudad;
     private javax.swing.JButton BuscarBtn;
     private javax.swing.JLabel CiudadesDisponibles;
+    private javax.swing.JButton EliminarBtn1;
+    private javax.swing.JButton EliminarBtn2;
+    private javax.swing.JButton EliminarBtn3;
     private javax.swing.JTextPane EmailHotelTP;
     private javax.swing.JTextPane EmailHotelTP1;
     private javax.swing.JTextPane EmailHotelTP2;
-    private javax.swing.JTextPane EmailHotelTP3;
     private javax.swing.JPanel Header;
     private javax.swing.JPanel Hotel_InfoBox1;
     private javax.swing.JPanel Hotel_InfoBox2;
     private javax.swing.JPanel Hotel_InfoBox3;
-    private javax.swing.JPanel Hotel_InfoBox4;
     private javax.swing.JLabel Hotel_Pic1;
     private javax.swing.JLabel Hotel_Pic2;
     private javax.swing.JLabel Hotel_Pic3;
-    private javax.swing.JLabel Hotel_Pic4;
     private javax.swing.JButton ModificarBtn1;
     private javax.swing.JButton ModificarBtn2;
     private javax.swing.JButton ModificarBtn3;
-    private javax.swing.JButton ModificarBtn4;
     private javax.swing.JLabel NombreApp;
     private javax.swing.JTextPane NombreHotelTP2;
     private javax.swing.JTextPane NombreHotelTP3;
     private javax.swing.JTextPane NombreHotelTP4;
-    private javax.swing.JTextPane NombreHotelTP5;
     private javax.swing.JButton Perfil;
     private javax.swing.JLabel ProfilePic;
     private javax.swing.JButton Salir;
@@ -571,17 +538,12 @@ public class V_HotelList extends javax.swing.JFrame {
     private javax.swing.JTextPane TelefonoHotelTP;
     private javax.swing.JTextPane TelefonoHotelTP1;
     private javax.swing.JTextPane TelefonoHotelTP2;
-    private javax.swing.JTextPane TelefonoHotelTP3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane14;
-    private javax.swing.JScrollPane jScrollPane15;
-    private javax.swing.JScrollPane jScrollPane16;
-    private javax.swing.JScrollPane jScrollPane17;
-    private javax.swing.JScrollPane jScrollPane18;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
@@ -592,6 +554,5 @@ public class V_HotelList extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane2;
     private javax.swing.JTextPane jTextPane3;
     private javax.swing.JTextPane jTextPane4;
-    private javax.swing.JTextPane jTextPane5;
     // End of variables declaration//GEN-END:variables
 }

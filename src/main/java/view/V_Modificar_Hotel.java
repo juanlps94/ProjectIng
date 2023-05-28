@@ -33,22 +33,26 @@ public class V_Modificar_Hotel extends javax.swing.JFrame {
         Salir = new javax.swing.JButton();
         ProfilePic = new javax.swing.JLabel();
         Background = new javax.swing.JPanel();
-        ModCiudadLabel = new javax.swing.JLabel();
+        ModHotelLabel = new javax.swing.JLabel();
+        ConfirmarBtn = new javax.swing.JButton();
         RegresarBtn = new javax.swing.JButton();
         HotelInfoBox = new javax.swing.JPanel();
         NombreField = new javax.swing.JTextField();
         RankingField = new javax.swing.JTextField();
+        TelefonosField = new javax.swing.JTextField();
+        EmailField = new javax.swing.JTextField();
         HabitacionesField = new javax.swing.JTextField();
-        OpinionesField = new javax.swing.JTextField();
-        ZonaField = new javax.swing.JTextField();
         NombreLabel = new javax.swing.JLabel();
         RankingLabel = new javax.swing.JLabel();
+        TelefonosLabel = new javax.swing.JLabel();
+        EmailLabel = new javax.swing.JLabel();
         HabitacionesLabel = new javax.swing.JLabel();
-        OpinionesLabel = new javax.swing.JLabel();
-        ZonaLabel = new javax.swing.JLabel();
-        CambiarBtn = new javax.swing.JButton();
+        DescripcionLabel = new javax.swing.JLabel();
+        DescripcionScroll = new javax.swing.JScrollPane();
+        DescripcionTA = new javax.swing.JTextArea();
         AdjuntarImgLabel = new javax.swing.JLabel();
-        HotelImageLabel = new javax.swing.JLabel();
+        CiudadImage = new javax.swing.JLabel();
+        EliminarBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("123 Viajes C.A.");
@@ -66,12 +70,14 @@ public class V_Modificar_Hotel extends javax.swing.JFrame {
         NombreApp.setText(" 123 Viajes C.A");
 
         BienvenidoMensage.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        BienvenidoMensage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         BienvenidoMensage.setText("Bienvenido/a");
 
         Perfil.setBackground(new java.awt.Color(153, 255, 255));
+        Perfil.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Perfil.setMnemonic('3');
         Perfil.setText("Perfil");
-        Perfil.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 0, 255), null));
+        Perfil.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 255, 255)));
         Perfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PerfilActionPerformed(evt);
@@ -79,9 +85,10 @@ public class V_Modificar_Hotel extends javax.swing.JFrame {
         });
 
         Salir.setBackground(new java.awt.Color(153, 255, 255));
+        Salir.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Salir.setMnemonic('3');
         Salir.setText("Salir");
-        Salir.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 0, 255), null));
+        Salir.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 255, 255)));
         Salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SalirActionPerformed(evt);
@@ -90,7 +97,7 @@ public class V_Modificar_Hotel extends javax.swing.JFrame {
 
         ProfilePic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ProfilePic.setText("ProfilePic");
-        ProfilePic.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ProfilePic.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 255)));
 
         javax.swing.GroupLayout HeaderLayout = new javax.swing.GroupLayout(Header);
         Header.setLayout(HeaderLayout);
@@ -102,11 +109,11 @@ public class V_Modificar_Hotel extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 302, Short.MAX_VALUE)
                 .addComponent(ProfilePic, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(HeaderLayout.createSequentialGroup()
-                        .addComponent(Perfil)
+                        .addComponent(Perfil, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Salir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(BienvenidoMensage, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(16, 16, 16))
         );
@@ -118,152 +125,169 @@ public class V_Modificar_Hotel extends javax.swing.JFrame {
                 .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(HeaderLayout.createSequentialGroup()
                         .addComponent(BienvenidoMensage, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, Short.MAX_VALUE)
-                        .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Perfil)
-                            .addComponent(Salir)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Salir, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                            .addComponent(Perfil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(ProfilePic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
         getContentPane().add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        Background.setBackground(new java.awt.Color(255, 255, 255));
         Background.setPreferredSize(new java.awt.Dimension(720, 480));
+        Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        ModCiudadLabel.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
-        ModCiudadLabel.setText("Modificar Hotel");
+        ModHotelLabel.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        ModHotelLabel.setText("Modificar Hotel");
+        Background.add(ModHotelLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, -1, 30));
 
+        ConfirmarBtn.setBackground(new java.awt.Color(204, 255, 255));
+        ConfirmarBtn.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        ConfirmarBtn.setText("Confirmar");
+        ConfirmarBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        ConfirmarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConfirmarBtnActionPerformed(evt);
+            }
+        });
+        Background.add(ConfirmarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 370, 113, 39));
+
+        RegresarBtn.setBackground(new java.awt.Color(204, 255, 255));
+        RegresarBtn.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         RegresarBtn.setText("Regresar");
+        RegresarBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
         RegresarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RegresarBtnActionPerformed(evt);
             }
         });
+        Background.add(RegresarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 370, 113, 39));
 
         HotelInfoBox.setBackground(new java.awt.Color(204, 255, 255));
         HotelInfoBox.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
 
-        NombreLabel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        NombreField.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+
+        RankingField.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+
+        TelefonosField.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+
+        EmailField.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+
+        HabitacionesField.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        HabitacionesField.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
+
+        NombreLabel.setLabelFor(NombreField);
         NombreLabel.setText("Nombre");
 
-        RankingLabel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        RankingLabel.setLabelFor(RankingField);
         RankingLabel.setText("Ranking");
 
-        HabitacionesLabel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        TelefonosLabel.setLabelFor(TelefonosField);
+        TelefonosLabel.setText("Teléfono");
+
+        EmailLabel.setLabelFor(EmailField);
+        EmailLabel.setText("Email");
+
+        HabitacionesLabel.setLabelFor(HabitacionesField);
         HabitacionesLabel.setText("Habitaciones");
 
-        OpinionesLabel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        OpinionesLabel.setText("Opiniones");
+        DescripcionLabel.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        DescripcionLabel.setText("Descripción");
 
-        ZonaLabel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        ZonaLabel.setText("Zona");
-
-        CambiarBtn.setText("Cambiar");
+        DescripcionTA.setColumns(20);
+        DescripcionTA.setRows(5);
+        DescripcionScroll.setViewportView(DescripcionTA);
 
         javax.swing.GroupLayout HotelInfoBoxLayout = new javax.swing.GroupLayout(HotelInfoBox);
         HotelInfoBox.setLayout(HotelInfoBoxLayout);
         HotelInfoBoxLayout.setHorizontalGroup(
             HotelInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HotelInfoBoxLayout.createSequentialGroup()
-                .addGap(0, 25, Short.MAX_VALUE)
+                .addGap(12, 12, 12)
                 .addGroup(HotelInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(HabitacionesLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(OpinionesLabel)
+                    .addComponent(TelefonosLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(EmailLabel)
                     .addComponent(RankingLabel)
-                    .addComponent(NombreLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ZonaLabel))
-                .addGap(36, 36, 36)
+                    .addComponent(HabitacionesLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(NombreLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(HotelInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(OpinionesField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(HabitacionesField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RankingField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(NombreField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ZonaField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29))
-            .addGroup(HotelInfoBoxLayout.createSequentialGroup()
-                .addGap(61, 61, 61)
-                .addComponent(CambiarBtn)
+                    .addComponent(EmailField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TelefonosField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RankingField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NombreField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(HabitacionesField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(HotelInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(HotelInfoBoxLayout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(DescripcionLabel))
+                    .addGroup(HotelInfoBoxLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(DescripcionScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         HotelInfoBoxLayout.setVerticalGroup(
             HotelInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HotelInfoBoxLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(HotelInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(NombreField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(NombreLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(HotelInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(RankingField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RankingLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(HotelInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(HabitacionesField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(HabitacionesLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(HotelInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(OpinionesField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(OpinionesLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(HotelInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ZonaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ZonaLabel))
-                .addGap(26, 26, 26)
-                .addComponent(CambiarBtn)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addGap(9, 9, 9)
+                .addComponent(DescripcionLabel)
+                .addGroup(HotelInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(HotelInfoBoxLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                        .addGroup(HotelInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(NombreField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(NombreLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(HotelInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(RankingField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(RankingLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(HotelInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(TelefonosField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TelefonosLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(HotelInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(EmailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(EmailLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(HotelInfoBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(HabitacionesField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(HabitacionesLabel))
+                        .addGap(39, 39, 39))
+                    .addGroup(HotelInfoBoxLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(DescripcionScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        AdjuntarImgLabel.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        Background.add(HotelInfoBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 500, 220));
+
         AdjuntarImgLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         AdjuntarImgLabel.setText("Adjuntar imagen");
+        Background.add(AdjuntarImgLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 175, -1));
 
-        HotelImageLabel.setBackground(new java.awt.Color(255, 255, 255));
-        HotelImageLabel.setForeground(new java.awt.Color(102, 102, 102));
-        HotelImageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        HotelImageLabel.setText("HotelImage");
-        HotelImageLabel.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 2, true), new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true)));
+        CiudadImage.setBackground(new java.awt.Color(204, 255, 255));
+        CiudadImage.setForeground(new java.awt.Color(153, 153, 153));
+        CiudadImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        CiudadImage.setText("HotelImage");
+        CiudadImage.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 255, 255), 2, true), new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true)));
+        Background.add(CiudadImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 175, 175));
 
-        javax.swing.GroupLayout BackgroundLayout = new javax.swing.GroupLayout(Background);
-        Background.setLayout(BackgroundLayout);
-        BackgroundLayout.setHorizontalGroup(
-            BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BackgroundLayout.createSequentialGroup()
-                .addContainerGap(249, Short.MAX_VALUE)
-                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
-                        .addComponent(ModCiudadLabel)
-                        .addGap(304, 304, 304))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
-                        .addComponent(RegresarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
-                .addGap(116, 116, 116)
-                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(HotelImageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
-                    .addComponent(AdjuntarImgLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(HotelInfoBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(122, 122, 122))
-        );
-        BackgroundLayout.setVerticalGroup(
-            BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BackgroundLayout.createSequentialGroup()
-                .addGap(106, 106, 106)
-                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(BackgroundLayout.createSequentialGroup()
-                        .addComponent(ModCiudadLabel)
-                        .addGap(18, 18, 18)
-                        .addComponent(HotelInfoBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(BackgroundLayout.createSequentialGroup()
-                        .addComponent(HotelImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(AdjuntarImgLabel)))
-                .addGap(32, 32, 32)
-                .addComponent(RegresarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
-        );
+        EliminarBtn.setBackground(new java.awt.Color(255, 204, 204));
+        EliminarBtn.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        EliminarBtn.setText("Eliminar");
+        EliminarBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 1, true));
+        EliminarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarBtnActionPerformed(evt);
+            }
+        });
+        Background.add(EliminarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, 113, 39));
 
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 0, -1, -1));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         getAccessibleContext().setAccessibleDescription("");
 
@@ -278,9 +302,17 @@ public class V_Modificar_Hotel extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_SalirActionPerformed
 
+    private void ConfirmarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmarBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ConfirmarBtnActionPerformed
+
     private void RegresarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_RegresarBtnActionPerformed
+
+    private void EliminarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EliminarBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -291,25 +323,29 @@ public class V_Modificar_Hotel extends javax.swing.JFrame {
     private javax.swing.JLabel AdjuntarImgLabel;
     private javax.swing.JPanel Background;
     private javax.swing.JLabel BienvenidoMensage;
-    private javax.swing.JButton CambiarBtn;
+    private javax.swing.JLabel CiudadImage;
+    private javax.swing.JButton ConfirmarBtn;
+    private javax.swing.JLabel DescripcionLabel;
+    private javax.swing.JScrollPane DescripcionScroll;
+    private javax.swing.JTextArea DescripcionTA;
+    private javax.swing.JButton EliminarBtn;
+    private javax.swing.JTextField EmailField;
+    private javax.swing.JLabel EmailLabel;
     private javax.swing.JTextField HabitacionesField;
     private javax.swing.JLabel HabitacionesLabel;
     private javax.swing.JPanel Header;
-    private javax.swing.JLabel HotelImageLabel;
     private javax.swing.JPanel HotelInfoBox;
-    private javax.swing.JLabel ModCiudadLabel;
+    private javax.swing.JLabel ModHotelLabel;
     private javax.swing.JLabel NombreApp;
     private javax.swing.JTextField NombreField;
     private javax.swing.JLabel NombreLabel;
-    private javax.swing.JTextField OpinionesField;
-    private javax.swing.JLabel OpinionesLabel;
     private javax.swing.JButton Perfil;
     private javax.swing.JLabel ProfilePic;
     private javax.swing.JTextField RankingField;
     private javax.swing.JLabel RankingLabel;
     private javax.swing.JButton RegresarBtn;
     private javax.swing.JButton Salir;
-    private javax.swing.JTextField ZonaField;
-    private javax.swing.JLabel ZonaLabel;
+    private javax.swing.JTextField TelefonosField;
+    private javax.swing.JLabel TelefonosLabel;
     // End of variables declaration//GEN-END:variables
 }

@@ -8,14 +8,14 @@ package view;
  *
  * @author usuario
  */
-public class V_CityList extends javax.swing.JFrame {
+public class V_CityList_Admin extends javax.swing.JFrame {
     V_Perfil_Modificar vistaModPerfil;
     V_Inicio vistaInicio;
     V_HotelList vistaHoteles;
     /**
      * Creates new form V_CityList
      */
-    public V_CityList(V_Perfil_Modificar vistaModPerfil, V_Inicio vistaInicial,V_HotelList vistaHoteles) {
+    public V_CityList_Admin(V_Perfil_Modificar vistaModPerfil, V_Inicio vistaInicial,V_HotelList vistaHoteles) {
         initComponents();
         this.vistaModPerfil = vistaModPerfil;
         this.vistaInicio = vistaInicial;
@@ -55,46 +55,36 @@ public class V_CityList extends javax.swing.JFrame {
         jScrollPane6 = new javax.swing.JScrollPane();
         DescripcionCiudad = new javax.swing.JTextPane();
         ModificarBtn1 = new javax.swing.JButton();
-        Ciudad_InfoBox2 = new javax.swing.JPanel();
-        Ciudad_Pic2 = new javax.swing.JLabel();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        ZonaTP1 = new javax.swing.JTextPane();
-        jScrollPane8 = new javax.swing.JScrollPane();
-        Ranking1 = new javax.swing.JTextPane();
-        jScrollPane9 = new javax.swing.JScrollPane();
-        NombreCiudadTP3 = new javax.swing.JTextPane();
-        jScrollPane10 = new javax.swing.JScrollPane();
-        DescripcionCiudad1 = new javax.swing.JTextPane();
-        ModificarBtn2 = new javax.swing.JButton();
-        Ciudad_InfoBox3 = new javax.swing.JPanel();
-        Ciudad_Pic3 = new javax.swing.JLabel();
-        jScrollPane11 = new javax.swing.JScrollPane();
-        ZonaTP2 = new javax.swing.JTextPane();
-        jScrollPane12 = new javax.swing.JScrollPane();
-        Ranking2 = new javax.swing.JTextPane();
-        jScrollPane13 = new javax.swing.JScrollPane();
-        NombreCiudadTP4 = new javax.swing.JTextPane();
-        jScrollPane14 = new javax.swing.JScrollPane();
-        DescripcionCiudad2 = new javax.swing.JTextPane();
-        ModificarBtn3 = new javax.swing.JButton();
-        Ciudad_InfoBox4 = new javax.swing.JPanel();
-        Ciudad_Pic4 = new javax.swing.JLabel();
-        jScrollPane15 = new javax.swing.JScrollPane();
-        ZonaTP3 = new javax.swing.JTextPane();
-        jScrollPane16 = new javax.swing.JScrollPane();
-        Ranking3 = new javax.swing.JTextPane();
-        jScrollPane17 = new javax.swing.JScrollPane();
-        NombreCiudadTP5 = new javax.swing.JTextPane();
-        jScrollPane18 = new javax.swing.JScrollPane();
-        DescripcionCiudad3 = new javax.swing.JTextPane();
-        ModificarBtn4 = new javax.swing.JButton();
+        EliminarBtn1 = new javax.swing.JButton();
+        Ciudad_InfoBox5 = new javax.swing.JPanel();
+        Ciudad_Pic5 = new javax.swing.JLabel();
+        jScrollPane19 = new javax.swing.JScrollPane();
+        ZonaTP4 = new javax.swing.JTextPane();
+        jScrollPane20 = new javax.swing.JScrollPane();
+        Ranking4 = new javax.swing.JTextPane();
+        jScrollPane21 = new javax.swing.JScrollPane();
+        NombreCiudadTP6 = new javax.swing.JTextPane();
+        jScrollPane22 = new javax.swing.JScrollPane();
+        DescripcionCiudad4 = new javax.swing.JTextPane();
+        ModificarBtn5 = new javax.swing.JButton();
+        EliminarBtn2 = new javax.swing.JButton();
+        Ciudad_InfoBox6 = new javax.swing.JPanel();
+        Ciudad_Pic6 = new javax.swing.JLabel();
+        jScrollPane23 = new javax.swing.JScrollPane();
+        ZonaTP5 = new javax.swing.JTextPane();
+        jScrollPane24 = new javax.swing.JScrollPane();
+        Ranking5 = new javax.swing.JTextPane();
+        jScrollPane25 = new javax.swing.JScrollPane();
+        NombreCiudadTP7 = new javax.swing.JTextPane();
+        jScrollPane26 = new javax.swing.JScrollPane();
+        DescripcionCiudad5 = new javax.swing.JTextPane();
+        ModificarBtn6 = new javax.swing.JButton();
+        EliminarBtn3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("123 Viajes C.A.");
         setBackground(new java.awt.Color(255, 255, 255));
-        setMaximumSize(new java.awt.Dimension(720, 480));
         setMinimumSize(new java.awt.Dimension(720, 480));
-        setPreferredSize(new java.awt.Dimension(720, 480));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -258,188 +248,160 @@ public class V_CityList extends javax.swing.JFrame {
         Ciudad_InfoBox1.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 440, 94));
 
         ModificarBtn1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        ModificarBtn1.setText("Reservar");
+        ModificarBtn1.setText("Modificar");
         ModificarBtn1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
         ModificarBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModificarBtn1ActionPerformed(evt);
             }
         });
-        Ciudad_InfoBox1.add(ModificarBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 75, 50));
+        Ciudad_InfoBox1.add(ModificarBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 75, 50));
 
-        Ciudad_InfoBox2.setBackground(new java.awt.Color(204, 255, 255));
-        Ciudad_InfoBox2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        Ciudad_InfoBox2.setAutoscrolls(true);
-        Ciudad_InfoBox2.setMaximumSize(new java.awt.Dimension(50, 32767));
-        Ciudad_InfoBox2.setMinimumSize(new java.awt.Dimension(645, 127));
-        Ciudad_InfoBox2.setPreferredSize(new java.awt.Dimension(645, 134));
-        Ciudad_InfoBox2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        Ciudad_Pic2.setBackground(new java.awt.Color(204, 255, 255));
-        Ciudad_Pic2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        Ciudad_Pic2.setForeground(new java.awt.Color(153, 153, 153));
-        Ciudad_Pic2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Ciudad_Pic2.setText("Pic");
-        Ciudad_Pic2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        Ciudad_InfoBox2.add(Ciudad_Pic2, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 7, 100, 120));
-
-        ZonaTP1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        ZonaTP1.setFont(new java.awt.Font("Roboto", 2, 12)); // NOI18N
-        ZonaTP1.setForeground(new java.awt.Color(153, 153, 153));
-        ZonaTP1.setText("Zona");
-        jScrollPane7.setViewportView(ZonaTP1);
-
-        Ciudad_InfoBox2.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, 140, -1));
-
-        Ranking1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        Ranking1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        Ranking1.setForeground(new java.awt.Color(153, 153, 153));
-        Ranking1.setText("20/123");
-        jScrollPane8.setViewportView(Ranking1);
-
-        Ciudad_InfoBox2.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(316, 10, 90, -1));
-
-        NombreCiudadTP3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        NombreCiudadTP3.setFont(new java.awt.Font("Roboto", 2, 12)); // NOI18N
-        NombreCiudadTP3.setForeground(new java.awt.Color(153, 153, 153));
-        NombreCiudadTP3.setText("Nombre");
-        NombreCiudadTP3.setPreferredSize(new java.awt.Dimension(20, 17));
-        jScrollPane9.setViewportView(NombreCiudadTP3);
-
-        Ciudad_InfoBox2.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 200, -1));
-
-        DescripcionCiudad1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        DescripcionCiudad1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        DescripcionCiudad1.setText("Descripcion");
-        jScrollPane10.setViewportView(DescripcionCiudad1);
-
-        Ciudad_InfoBox2.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 440, 94));
-
-        ModificarBtn2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        ModificarBtn2.setText("Reservar");
-        ModificarBtn2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        ModificarBtn2.addActionListener(new java.awt.event.ActionListener() {
+        EliminarBtn1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        EliminarBtn1.setText("Eliminar");
+        EliminarBtn1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        EliminarBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarBtn2ActionPerformed(evt);
+                EliminarBtn1ActionPerformed(evt);
             }
         });
-        Ciudad_InfoBox2.add(ModificarBtn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 75, 50));
+        Ciudad_InfoBox1.add(EliminarBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, 75, 50));
 
-        Ciudad_InfoBox3.setBackground(new java.awt.Color(204, 255, 255));
-        Ciudad_InfoBox3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        Ciudad_InfoBox3.setAutoscrolls(true);
-        Ciudad_InfoBox3.setMaximumSize(new java.awt.Dimension(50, 32767));
-        Ciudad_InfoBox3.setMinimumSize(new java.awt.Dimension(645, 127));
-        Ciudad_InfoBox3.setPreferredSize(new java.awt.Dimension(645, 134));
-        Ciudad_InfoBox3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Ciudad_InfoBox5.setBackground(new java.awt.Color(204, 255, 255));
+        Ciudad_InfoBox5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        Ciudad_InfoBox5.setAutoscrolls(true);
+        Ciudad_InfoBox5.setMaximumSize(new java.awt.Dimension(50, 32767));
+        Ciudad_InfoBox5.setMinimumSize(new java.awt.Dimension(645, 127));
+        Ciudad_InfoBox5.setPreferredSize(new java.awt.Dimension(645, 134));
+        Ciudad_InfoBox5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Ciudad_Pic3.setBackground(new java.awt.Color(204, 255, 255));
-        Ciudad_Pic3.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        Ciudad_Pic3.setForeground(new java.awt.Color(153, 153, 153));
-        Ciudad_Pic3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Ciudad_Pic3.setText("Pic");
-        Ciudad_Pic3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        Ciudad_InfoBox3.add(Ciudad_Pic3, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 7, 100, 120));
+        Ciudad_Pic5.setBackground(new java.awt.Color(204, 255, 255));
+        Ciudad_Pic5.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        Ciudad_Pic5.setForeground(new java.awt.Color(153, 153, 153));
+        Ciudad_Pic5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Ciudad_Pic5.setText("Pic");
+        Ciudad_Pic5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        Ciudad_InfoBox5.add(Ciudad_Pic5, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 7, 100, 120));
 
-        ZonaTP2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        ZonaTP2.setFont(new java.awt.Font("Roboto", 2, 12)); // NOI18N
-        ZonaTP2.setForeground(new java.awt.Color(153, 153, 153));
-        ZonaTP2.setText("Zona");
-        jScrollPane11.setViewportView(ZonaTP2);
+        ZonaTP4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        ZonaTP4.setFont(new java.awt.Font("Roboto", 2, 12)); // NOI18N
+        ZonaTP4.setForeground(new java.awt.Color(153, 153, 153));
+        ZonaTP4.setText("Zona");
+        jScrollPane19.setViewportView(ZonaTP4);
 
-        Ciudad_InfoBox3.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, 140, -1));
+        Ciudad_InfoBox5.add(jScrollPane19, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, 140, -1));
 
-        Ranking2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        Ranking2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        Ranking2.setForeground(new java.awt.Color(153, 153, 153));
-        Ranking2.setText("20/123");
-        jScrollPane12.setViewportView(Ranking2);
+        Ranking4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        Ranking4.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        Ranking4.setForeground(new java.awt.Color(153, 153, 153));
+        Ranking4.setText("20/123");
+        jScrollPane20.setViewportView(Ranking4);
 
-        Ciudad_InfoBox3.add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(316, 10, 90, -1));
+        Ciudad_InfoBox5.add(jScrollPane20, new org.netbeans.lib.awtextra.AbsoluteConstraints(316, 10, 90, -1));
 
-        NombreCiudadTP4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        NombreCiudadTP4.setFont(new java.awt.Font("Roboto", 2, 12)); // NOI18N
-        NombreCiudadTP4.setForeground(new java.awt.Color(153, 153, 153));
-        NombreCiudadTP4.setText("Nombre");
-        NombreCiudadTP4.setPreferredSize(new java.awt.Dimension(20, 17));
-        jScrollPane13.setViewportView(NombreCiudadTP4);
+        NombreCiudadTP6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        NombreCiudadTP6.setFont(new java.awt.Font("Roboto", 2, 12)); // NOI18N
+        NombreCiudadTP6.setForeground(new java.awt.Color(153, 153, 153));
+        NombreCiudadTP6.setText("Nombre");
+        NombreCiudadTP6.setPreferredSize(new java.awt.Dimension(20, 17));
+        jScrollPane21.setViewportView(NombreCiudadTP6);
 
-        Ciudad_InfoBox3.add(jScrollPane13, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 200, -1));
+        Ciudad_InfoBox5.add(jScrollPane21, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 200, -1));
 
-        DescripcionCiudad2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        DescripcionCiudad2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        DescripcionCiudad2.setText("Descripcion");
-        jScrollPane14.setViewportView(DescripcionCiudad2);
+        DescripcionCiudad4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        DescripcionCiudad4.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        DescripcionCiudad4.setText("Descripcion");
+        jScrollPane22.setViewportView(DescripcionCiudad4);
 
-        Ciudad_InfoBox3.add(jScrollPane14, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 440, 94));
+        Ciudad_InfoBox5.add(jScrollPane22, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 440, 94));
 
-        ModificarBtn3.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        ModificarBtn3.setText("Reservar");
-        ModificarBtn3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        ModificarBtn3.addActionListener(new java.awt.event.ActionListener() {
+        ModificarBtn5.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        ModificarBtn5.setText("Modificar");
+        ModificarBtn5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        ModificarBtn5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarBtn3ActionPerformed(evt);
+                ModificarBtn5ActionPerformed(evt);
             }
         });
-        Ciudad_InfoBox3.add(ModificarBtn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 75, 50));
+        Ciudad_InfoBox5.add(ModificarBtn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 75, 50));
 
-        Ciudad_InfoBox4.setBackground(new java.awt.Color(204, 255, 255));
-        Ciudad_InfoBox4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        Ciudad_InfoBox4.setAutoscrolls(true);
-        Ciudad_InfoBox4.setMaximumSize(new java.awt.Dimension(50, 32767));
-        Ciudad_InfoBox4.setMinimumSize(new java.awt.Dimension(645, 127));
-        Ciudad_InfoBox4.setPreferredSize(new java.awt.Dimension(645, 134));
-        Ciudad_InfoBox4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        Ciudad_Pic4.setBackground(new java.awt.Color(204, 255, 255));
-        Ciudad_Pic4.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        Ciudad_Pic4.setForeground(new java.awt.Color(153, 153, 153));
-        Ciudad_Pic4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Ciudad_Pic4.setText("Pic");
-        Ciudad_Pic4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        Ciudad_InfoBox4.add(Ciudad_Pic4, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 7, 100, 120));
-
-        ZonaTP3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        ZonaTP3.setFont(new java.awt.Font("Roboto", 2, 12)); // NOI18N
-        ZonaTP3.setForeground(new java.awt.Color(153, 153, 153));
-        ZonaTP3.setText("Zona");
-        jScrollPane15.setViewportView(ZonaTP3);
-
-        Ciudad_InfoBox4.add(jScrollPane15, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, 140, -1));
-
-        Ranking3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        Ranking3.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        Ranking3.setForeground(new java.awt.Color(153, 153, 153));
-        Ranking3.setText("20/123");
-        jScrollPane16.setViewportView(Ranking3);
-
-        Ciudad_InfoBox4.add(jScrollPane16, new org.netbeans.lib.awtextra.AbsoluteConstraints(316, 10, 90, -1));
-
-        NombreCiudadTP5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        NombreCiudadTP5.setFont(new java.awt.Font("Roboto", 2, 12)); // NOI18N
-        NombreCiudadTP5.setForeground(new java.awt.Color(153, 153, 153));
-        NombreCiudadTP5.setText("Nombre");
-        NombreCiudadTP5.setPreferredSize(new java.awt.Dimension(20, 17));
-        jScrollPane17.setViewportView(NombreCiudadTP5);
-
-        Ciudad_InfoBox4.add(jScrollPane17, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 200, -1));
-
-        DescripcionCiudad3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        DescripcionCiudad3.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        DescripcionCiudad3.setText("Descripcion");
-        jScrollPane18.setViewportView(DescripcionCiudad3);
-
-        Ciudad_InfoBox4.add(jScrollPane18, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 440, 94));
-
-        ModificarBtn4.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        ModificarBtn4.setText("Reservar");
-        ModificarBtn4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
-        ModificarBtn4.addActionListener(new java.awt.event.ActionListener() {
+        EliminarBtn2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        EliminarBtn2.setText("Eliminar");
+        EliminarBtn2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        EliminarBtn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarBtn4ActionPerformed(evt);
+                EliminarBtn2ActionPerformed(evt);
             }
         });
-        Ciudad_InfoBox4.add(ModificarBtn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 75, 50));
+        Ciudad_InfoBox5.add(EliminarBtn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, 75, 50));
+
+        Ciudad_InfoBox6.setBackground(new java.awt.Color(204, 255, 255));
+        Ciudad_InfoBox6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        Ciudad_InfoBox6.setAutoscrolls(true);
+        Ciudad_InfoBox6.setMaximumSize(new java.awt.Dimension(50, 32767));
+        Ciudad_InfoBox6.setMinimumSize(new java.awt.Dimension(645, 127));
+        Ciudad_InfoBox6.setPreferredSize(new java.awt.Dimension(645, 134));
+        Ciudad_InfoBox6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Ciudad_Pic6.setBackground(new java.awt.Color(204, 255, 255));
+        Ciudad_Pic6.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        Ciudad_Pic6.setForeground(new java.awt.Color(153, 153, 153));
+        Ciudad_Pic6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Ciudad_Pic6.setText("Pic");
+        Ciudad_Pic6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        Ciudad_InfoBox6.add(Ciudad_Pic6, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 7, 100, 120));
+
+        ZonaTP5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        ZonaTP5.setFont(new java.awt.Font("Roboto", 2, 12)); // NOI18N
+        ZonaTP5.setForeground(new java.awt.Color(153, 153, 153));
+        ZonaTP5.setText("Zona");
+        jScrollPane23.setViewportView(ZonaTP5);
+
+        Ciudad_InfoBox6.add(jScrollPane23, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, 140, -1));
+
+        Ranking5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        Ranking5.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        Ranking5.setForeground(new java.awt.Color(153, 153, 153));
+        Ranking5.setText("20/123");
+        jScrollPane24.setViewportView(Ranking5);
+
+        Ciudad_InfoBox6.add(jScrollPane24, new org.netbeans.lib.awtextra.AbsoluteConstraints(316, 10, 90, -1));
+
+        NombreCiudadTP7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        NombreCiudadTP7.setFont(new java.awt.Font("Roboto", 2, 12)); // NOI18N
+        NombreCiudadTP7.setForeground(new java.awt.Color(153, 153, 153));
+        NombreCiudadTP7.setText("Nombre");
+        NombreCiudadTP7.setPreferredSize(new java.awt.Dimension(20, 17));
+        jScrollPane25.setViewportView(NombreCiudadTP7);
+
+        Ciudad_InfoBox6.add(jScrollPane25, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 200, -1));
+
+        DescripcionCiudad5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        DescripcionCiudad5.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        DescripcionCiudad5.setText("Descripcion");
+        jScrollPane26.setViewportView(DescripcionCiudad5);
+
+        Ciudad_InfoBox6.add(jScrollPane26, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 440, 94));
+
+        ModificarBtn6.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        ModificarBtn6.setText("Modificar");
+        ModificarBtn6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        ModificarBtn6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModificarBtn6ActionPerformed(evt);
+            }
+        });
+        Ciudad_InfoBox6.add(ModificarBtn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 75, 50));
+
+        EliminarBtn3.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        EliminarBtn3.setText("Eliminar");
+        EliminarBtn3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        EliminarBtn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarBtn3ActionPerformed(evt);
+            }
+        });
+        Ciudad_InfoBox6.add(EliminarBtn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, 75, 50));
 
         javax.swing.GroupLayout ScrollBoxLayout = new javax.swing.GroupLayout(ScrollBox);
         ScrollBox.setLayout(ScrollBoxLayout);
@@ -448,9 +410,8 @@ public class V_CityList extends javax.swing.JFrame {
             .addGroup(ScrollBoxLayout.createSequentialGroup()
                 .addGroup(ScrollBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Ciudad_InfoBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Ciudad_InfoBox2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Ciudad_InfoBox3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Ciudad_InfoBox4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Ciudad_InfoBox5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Ciudad_InfoBox6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         ScrollBoxLayout.setVerticalGroup(
@@ -458,12 +419,10 @@ public class V_CityList extends javax.swing.JFrame {
             .addGroup(ScrollBoxLayout.createSequentialGroup()
                 .addComponent(Ciudad_InfoBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Ciudad_InfoBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Ciudad_InfoBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Ciudad_InfoBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Ciudad_InfoBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 771, Short.MAX_VALUE))
+                .addComponent(Ciudad_InfoBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1191, Short.MAX_VALUE))
         );
 
         Scroll_BGPanel.add(ScrollBox);
@@ -496,9 +455,9 @@ public class V_CityList extends javax.swing.JFrame {
                     .addComponent(BuscadorCiudad)
                     .addComponent(BuscarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
                     .addComponent(CiudadesDisponibles, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -526,17 +485,25 @@ public class V_CityList extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ModificarBtn1ActionPerformed
 
-    private void ModificarBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarBtn2ActionPerformed
+    private void EliminarBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarBtn1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ModificarBtn2ActionPerformed
+    }//GEN-LAST:event_EliminarBtn1ActionPerformed
 
-    private void ModificarBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarBtn3ActionPerformed
+    private void ModificarBtn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarBtn5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ModificarBtn3ActionPerformed
+    }//GEN-LAST:event_ModificarBtn5ActionPerformed
 
-    private void ModificarBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarBtn4ActionPerformed
+    private void EliminarBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarBtn2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ModificarBtn4ActionPerformed
+    }//GEN-LAST:event_EliminarBtn2ActionPerformed
+
+    private void ModificarBtn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarBtn6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ModificarBtn6ActionPerformed
+
+    private void EliminarBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarBtn3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EliminarBtn3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -548,57 +515,49 @@ public class V_CityList extends javax.swing.JFrame {
     private javax.swing.JTextField BuscadorCiudad;
     private javax.swing.JButton BuscarBtn;
     private javax.swing.JPanel Ciudad_InfoBox1;
-    private javax.swing.JPanel Ciudad_InfoBox2;
-    private javax.swing.JPanel Ciudad_InfoBox3;
-    private javax.swing.JPanel Ciudad_InfoBox4;
+    private javax.swing.JPanel Ciudad_InfoBox5;
+    private javax.swing.JPanel Ciudad_InfoBox6;
     private javax.swing.JLabel Ciudad_Pic1;
-    private javax.swing.JLabel Ciudad_Pic2;
-    private javax.swing.JLabel Ciudad_Pic3;
-    private javax.swing.JLabel Ciudad_Pic4;
+    private javax.swing.JLabel Ciudad_Pic5;
+    private javax.swing.JLabel Ciudad_Pic6;
     private javax.swing.JLabel CiudadesDisponibles;
     private javax.swing.JTextPane DescripcionCiudad;
-    private javax.swing.JTextPane DescripcionCiudad1;
-    private javax.swing.JTextPane DescripcionCiudad2;
-    private javax.swing.JTextPane DescripcionCiudad3;
+    private javax.swing.JTextPane DescripcionCiudad4;
+    private javax.swing.JTextPane DescripcionCiudad5;
+    private javax.swing.JButton EliminarBtn1;
+    private javax.swing.JButton EliminarBtn2;
+    private javax.swing.JButton EliminarBtn3;
     private javax.swing.JPanel Header;
     private javax.swing.JButton ModificarBtn1;
-    private javax.swing.JButton ModificarBtn2;
-    private javax.swing.JButton ModificarBtn3;
-    private javax.swing.JButton ModificarBtn4;
+    private javax.swing.JButton ModificarBtn5;
+    private javax.swing.JButton ModificarBtn6;
     private javax.swing.JLabel NombreApp;
     private javax.swing.JTextPane NombreCiudadTP2;
-    private javax.swing.JTextPane NombreCiudadTP3;
-    private javax.swing.JTextPane NombreCiudadTP4;
-    private javax.swing.JTextPane NombreCiudadTP5;
+    private javax.swing.JTextPane NombreCiudadTP6;
+    private javax.swing.JTextPane NombreCiudadTP7;
     private javax.swing.JButton Perfil;
     private javax.swing.JLabel ProfilePic;
     private javax.swing.JTextPane Ranking;
-    private javax.swing.JTextPane Ranking1;
-    private javax.swing.JTextPane Ranking2;
-    private javax.swing.JTextPane Ranking3;
+    private javax.swing.JTextPane Ranking4;
+    private javax.swing.JTextPane Ranking5;
     private javax.swing.JButton Salir;
     private javax.swing.JPanel ScrollBox;
     private javax.swing.JPanel Scroll_BGPanel;
     private javax.swing.JTextPane ZonaTP;
-    private javax.swing.JTextPane ZonaTP1;
-    private javax.swing.JTextPane ZonaTP2;
-    private javax.swing.JTextPane ZonaTP3;
+    private javax.swing.JTextPane ZonaTP4;
+    private javax.swing.JTextPane ZonaTP5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane10;
-    private javax.swing.JScrollPane jScrollPane11;
-    private javax.swing.JScrollPane jScrollPane12;
-    private javax.swing.JScrollPane jScrollPane13;
-    private javax.swing.JScrollPane jScrollPane14;
-    private javax.swing.JScrollPane jScrollPane15;
-    private javax.swing.JScrollPane jScrollPane16;
-    private javax.swing.JScrollPane jScrollPane17;
-    private javax.swing.JScrollPane jScrollPane18;
+    private javax.swing.JScrollPane jScrollPane19;
+    private javax.swing.JScrollPane jScrollPane20;
+    private javax.swing.JScrollPane jScrollPane21;
+    private javax.swing.JScrollPane jScrollPane22;
+    private javax.swing.JScrollPane jScrollPane23;
+    private javax.swing.JScrollPane jScrollPane24;
+    private javax.swing.JScrollPane jScrollPane25;
+    private javax.swing.JScrollPane jScrollPane26;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JScrollPane jScrollPane9;
     // End of variables declaration//GEN-END:variables
 }

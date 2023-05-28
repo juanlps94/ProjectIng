@@ -33,7 +33,7 @@ public class V_Pago extends javax.swing.JFrame {
         Perfil = new javax.swing.JButton();
         Salir = new javax.swing.JButton();
         ProfilePic = new javax.swing.JLabel();
-        BG_Panel = new javax.swing.JPanel();
+        Background = new javax.swing.JPanel();
         FormPago = new javax.swing.JPanel();
         PagarBtn = new javax.swing.JButton();
         NumTarjetaLabel = new javax.swing.JLabel();
@@ -49,13 +49,14 @@ public class V_Pago extends javax.swing.JFrame {
         jRadioButton2 = new javax.swing.JRadioButton();
         CiudadField = new javax.swing.JTextField();
         CSCField = new javax.swing.JFormattedTextField();
-        TelefonoField = new javax.swing.JFormattedTextField();
         EmailField = new javax.swing.JFormattedTextField();
         CodigoPostalField = new javax.swing.JFormattedTextField();
-        NumTarjetaField = new javax.swing.JFormattedTextField();
-        Image = new javax.swing.JPanel();
+        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        jFormattedTextField2 = new javax.swing.JFormattedTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
         ProcederPagoLabel = new javax.swing.JLabel();
         RegresarBtn = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("123 Viajes C.A.");
@@ -75,7 +76,7 @@ public class V_Pago extends javax.swing.JFrame {
         BienvenidoMensage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         BienvenidoMensage.setText("Bienvenido/a");
 
-        Perfil.setBackground(new java.awt.Color(204, 255, 255));
+        Perfil.setBackground(new java.awt.Color(153, 255, 255));
         Perfil.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Perfil.setMnemonic('3');
         Perfil.setText("Perfil");
@@ -86,7 +87,7 @@ public class V_Pago extends javax.swing.JFrame {
             }
         });
 
-        Salir.setBackground(new java.awt.Color(204, 255, 255));
+        Salir.setBackground(new java.awt.Color(153, 255, 255));
         Salir.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         Salir.setMnemonic('3');
         Salir.setText("Salir");
@@ -137,7 +138,11 @@ public class V_Pago extends javax.swing.JFrame {
 
         getContentPane().add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        BG_Panel.setBackground(new java.awt.Color(255, 255, 255));
+        Background.setBackground(new java.awt.Color(255, 255, 255));
+        Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        FormPago.setBackground(new java.awt.Color(204, 255, 255));
+        FormPago.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
 
         PagarBtn.setBackground(new java.awt.Color(204, 255, 204));
         PagarBtn.setText("Pagar");
@@ -191,14 +196,19 @@ public class V_Pago extends javax.swing.JFrame {
 
         CSCField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getIntegerInstance())));
 
-        TelefonoField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
+        jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#"))));
+
+        jFormattedTextField2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
+        jFormattedTextField2.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0412", "0416", "0426", "0414", "0424" }));
 
         javax.swing.GroupLayout FormPagoLayout = new javax.swing.GroupLayout(FormPago);
         FormPago.setLayout(FormPagoLayout);
         FormPagoLayout.setHorizontalGroup(
             FormPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FormPagoLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addGap(18, 18, 18)
                 .addGroup(FormPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(NumTarjetaLabel)
                     .addComponent(TipoPagoLabel)
@@ -208,44 +218,41 @@ public class V_Pago extends javax.swing.JFrame {
                     .addComponent(CiudadLabel)
                     .addComponent(TelefonoLabel)
                     .addComponent(EmailLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(FormPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(FormPagoLayout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addGroup(FormPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(VencimientoField, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(FormPagoLayout.createSequentialGroup()
-                                .addComponent(jRadioButton1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
-                                .addComponent(jRadioButton2))))
+                    .addComponent(PagarBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(CSCField, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(VencimientoField, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FormPagoLayout.createSequentialGroup()
+                        .addComponent(jRadioButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(FormPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FormPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(CSCField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
-                                .addComponent(CiudadField, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(TelefonoField, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(EmailField, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(CodigoPostalField))
-                            .addComponent(NumTarjetaField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(FormPagoLayout.createSequentialGroup()
-                        .addGap(108, 108, 108)
-                        .addComponent(PagarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(8, 8, 8)))
-                .addContainerGap())
+                        .addComponent(jRadioButton2))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FormPagoLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(FormPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(CiudadField, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(EmailField, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(CodigoPostalField)
+                            .addGroup(FormPagoLayout.createSequentialGroup()
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jFormattedTextField1))
+                .addGap(15, 15, 15))
         );
         FormPagoLayout.setVerticalGroup(
             FormPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FormPagoLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
+            .addGroup(FormPagoLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(FormPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(NumTarjetaLabel)
-                    .addComponent(NumTarjetaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(FormPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(FormPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(TipoPagoLabel)
                     .addGroup(FormPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(TipoPagoLabel)
-                        .addComponent(jRadioButton1)))
+                        .addComponent(jRadioButton1)
+                        .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(FormPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(VencimientoLabel)
@@ -265,28 +272,22 @@ public class V_Pago extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(FormPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TelefonoLabel)
-                    .addComponent(TelefonoField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(FormPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(EmailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(EmailLabel))
-                .addGap(54, 54, 54)
-                .addComponent(PagarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
-                .addGap(21, 21, 21))
+                .addGap(36, 36, 36)
+                .addComponent(PagarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout ImageLayout = new javax.swing.GroupLayout(Image);
-        Image.setLayout(ImageLayout);
-        ImageLayout.setHorizontalGroup(
-            ImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 205, Short.MAX_VALUE)
-        );
-        ImageLayout.setVerticalGroup(
-            ImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 241, Short.MAX_VALUE)
-        );
+        Background.add(FormPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 89, -1, -1));
 
+        ProcederPagoLabel.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         ProcederPagoLabel.setText("Proceda con el pago");
+        Background.add(ProcederPagoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 123, -1, -1));
 
         RegresarBtn.setBackground(new java.awt.Color(255, 204, 204));
         RegresarBtn.setText("Regresar");
@@ -295,42 +296,14 @@ public class V_Pago extends javax.swing.JFrame {
                 RegresarBtnActionPerformed(evt);
             }
         });
+        Background.add(RegresarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 115, 29));
 
-        javax.swing.GroupLayout BG_PanelLayout = new javax.swing.GroupLayout(BG_Panel);
-        BG_Panel.setLayout(BG_PanelLayout);
-        BG_PanelLayout.setHorizontalGroup(
-            BG_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BG_PanelLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(BG_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(ProcederPagoLabel)
-                    .addComponent(Image, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BG_PanelLayout.createSequentialGroup()
-                        .addComponent(RegresarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)))
-                .addGap(29, 29, 29)
-                .addComponent(FormPago, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46))
-        );
-        BG_PanelLayout.setVerticalGroup(
-            BG_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BG_PanelLayout.createSequentialGroup()
-                .addGroup(BG_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(BG_PanelLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(ProcederPagoLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Image, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(RegresarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
-                        .addGap(35, 35, 35))
-                    .addGroup(BG_PanelLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(FormPago, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(58, 58, 58))
-        );
+        jLabel1.setBackground(new java.awt.Color(204, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 255), 1, true));
+        Background.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 190, 230));
 
-        getContentPane().add(BG_Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 510));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 480));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -369,7 +342,7 @@ public class V_Pago extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel BG_Panel;
+    private javax.swing.JPanel Background;
     private javax.swing.JLabel BienvenidoMensage;
     private javax.swing.JFormattedTextField CSCField;
     private javax.swing.JLabel CSCLabel;
@@ -381,9 +354,7 @@ public class V_Pago extends javax.swing.JFrame {
     private javax.swing.JLabel EmailLabel;
     private javax.swing.JPanel FormPago;
     private javax.swing.JPanel Header;
-    private javax.swing.JPanel Image;
     private javax.swing.JLabel NombreApp;
-    private javax.swing.JFormattedTextField NumTarjetaField;
     private javax.swing.JLabel NumTarjetaLabel;
     private javax.swing.JButton PagarBtn;
     private javax.swing.JButton Perfil;
@@ -391,12 +362,15 @@ public class V_Pago extends javax.swing.JFrame {
     private javax.swing.JLabel ProfilePic;
     private javax.swing.JButton RegresarBtn;
     private javax.swing.JButton Salir;
-    private javax.swing.JFormattedTextField TelefonoField;
     private javax.swing.JLabel TelefonoLabel;
     private javax.swing.ButtonGroup TipoDePagoBtnG;
     private javax.swing.JLabel TipoPagoLabel;
     private javax.swing.JFormattedTextField VencimientoField;
     private javax.swing.JLabel VencimientoLabel;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JFormattedTextField jFormattedTextField2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     // End of variables declaration//GEN-END:variables
