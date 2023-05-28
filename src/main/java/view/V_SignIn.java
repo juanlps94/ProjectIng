@@ -5,6 +5,8 @@
 package view;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
+import Main.Logic;
 
 /**
  *
@@ -29,7 +31,6 @@ public class V_SignIn extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenu1 = new javax.swing.JMenu();
         HeaderLogin = new javax.swing.JPanel();
         NombreApp = new javax.swing.JLabel();
         RegistrarseBtn = new javax.swing.JButton();
@@ -50,8 +51,6 @@ public class V_SignIn extends javax.swing.JFrame {
         InicioGmail = new javax.swing.JButton();
         InicioFacebook = new javax.swing.JButton();
         InicioTwitter = new javax.swing.JButton();
-
-        jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("123 Viajes C.A.");
@@ -290,6 +289,26 @@ public class V_SignIn extends javax.swing.JFrame {
 
     private void SummitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SummitBtnActionPerformed
         // TODO add your handling code here:
+        String name = this.NombreField.getText();
+        String last = this.ApellidoField.getText();
+        String phone = this.TelefonoField.getText();
+        String email = this.EmailField.getText();
+        String pass = this.ContrasenaField.getText();
+        System.out.println(this.NombreField.getText());
+        if (name==null || last=="" || phone =="" || email =="" || pass =="") {
+            JOptionPane.showMessageDialog(null, "Los campos no deben estar vacios");
+
+        } else {
+            this.NombreField.setText("");
+            this.ApellidoField.setText("");
+            this.TelefonoField.setText("");
+            this.EmailField.setText("");
+            this.ContrasenaField.setText("");
+            Logic newUsers = new Logic();
+            newUsers.CrearUsuario(name, email, last, pass, phone, false, 2);
+        }
+
+
     }//GEN-LAST:event_SummitBtnActionPerformed
 
     private void InicioGmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InicioGmailActionPerformed
@@ -327,6 +346,5 @@ public class V_SignIn extends javax.swing.JFrame {
     private javax.swing.JButton SummitBtn;
     private javax.swing.JTextField TelefonoField;
     private javax.swing.JLabel TelefonoLabel;
-    private javax.swing.JMenu jMenu1;
     // End of variables declaration//GEN-END:variables
 }

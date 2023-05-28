@@ -564,7 +564,7 @@ public class V_CityList extends javax.swing.JFrame {
     }//GEN-LAST:event_BuscadorCiudadMousePressed
 
     private void ReservarBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReservarBtn1MouseClicked
-    // TODO add your handling code here:
+    // Yunior
     vistaPago = new V_Pago();
     vistaPago.setVisible(true);
     this.dispose();
